@@ -11,11 +11,9 @@ export default class Portfolio extends Component {
     return(
       <div className="portfolio main" id="portfolio">
         <h1>Portfolio</h1>
-
         <Web />
         <Visual />
         <Audio />
-
       </div>
     )
   }
