@@ -3,12 +3,8 @@ import { Switch, Route, NavLink } from 'react-router-dom';
 
 import Print from './Print';
 import Digital from './Digital';
-import Bloom from './print/Bloom';
-import Churchill from './print/Churchill';
-import Binet from './print/Binet';
-import STNRelease from './digital/STNRelease';
-import TomWaits from './digital/TomWaits';
-import Zbar from './digital/Zbar';
+
+import EnhanceVisual from './EnhanceVisual';
 
 export default class Visual extends Component {
   render() {
@@ -27,12 +23,12 @@ export default class Visual extends Component {
           <Switch>
             <Route exact path="/" component={ Print } />
             <Route path="/digital" component={ Digital } />
-            <Route path="/bloom" component={ Bloom } />
-            <Route path="/churchill" component={Churchill} />
-            <Route path="/binet" component={Binet} />
-            <Route path="/stnRelease" component={STNRelease} />
-            <Route path="/tomWaits" component={TomWaits} />
-            <Route path="/zBar" component={Zbar} />
+            <Route path="/bloom" render={ () => <EnhanceVisual title="Bloom Yearbook 2016" alt="Bloom Yearbook" image="./images/BloomCover.jpg" return="/" /> } />
+            <Route path="/churchill" render={ () => <EnhanceVisual title="Churchill Yearbook 2017" alt="Churchill Park Yearbook" image="./images/churchillParkCover.jpg" return="/" /> } />
+            <Route path="/binet" render={ () => <EnhanceVisual title="Binet Yearbook 2018" alt="Binet Yearbook" image="./images/BinetCover.jpg" return="/" /> } />
+            <Route path="/stnRelease" render={ () => <EnhanceVisual title="Small Time Napoleon EP Release show poster 2017" alt="Small Time Napoleon release show poster" image="./images/STNEPReleasePoster.jpg" return="/digital" /> } />
+            <Route path="/tomWaits" render={ () => <EnhanceVisual title="Bella Muerta, Tom Waits inspired Show Poster 2016" alt="Tom Waits inspired show poster" image="./images/tomwaits.jpg" return="/digital" /> } />
+            <Route path="/zBar" render={ () => <EnhanceVisual title="Zanzabar Show Poster 2016" alt="Zanzabar show poster" image="./images/ZBAR.jpg" return="/digital" /> } />
           </Switch>
         </div>
       </div>
