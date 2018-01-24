@@ -1,16 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+import Image from './Image';
 
 
 const EnhanceVisual = (props) => {
+  let images = props.data.map((image) => {
+    return <Image title={image.title}
+                  return={image.return}
+                  image={image.image}
+                  alt={image.alt}
+                  key={image.id} />
+  });
   return (
-    <div className="portfolio-images enhance">
-      <NavLink to={ props.return }>
-        <img src={ props.image } alt={ props.alt } className="full-image" />
-      </NavLink>
-      <h3>{ props.title }</h3>
+    <div>
+      {images}
     </div>
   );
 }
 
-export default EnhanceVisual
+export default EnhanceVisual;

@@ -152,6 +152,28 @@ a {
   display: block;
 }
 
+.portfolio .visual {
+  margin-bottom: 5em;
+}
+
+.portfolio .visual h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  padding: .25em;
+  width: 75%;
+}
+
+.portfolio .visual p {
+  padding: 0em 2em;
+}
+
+.portfolio .visual p:first-of-type {
+  padding-top: 2em;
+}
+
+.portfolio .visual p:last-of-type {
+  padding-bottom: 2em;
+}
+
 
 /********************** ABOUT SECTION **********************/
 .about {
