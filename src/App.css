@@ -1,4 +1,8 @@
 /********************** BACIS SETUP **********************/
+html {
+  font-family: 'Raleway', sans-serif;
+}
+
 
 h1 {
   text-align: center;
@@ -15,9 +19,37 @@ a {
 .main {
   padding: 1em .5em;
   min-height: 75vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25));
+}
+
+.main h1 {
+  /* background: linear-gradient(to top, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25)); */
+  padding: 1em;
+  margin: 0 1em;
+  letter-spacing: 5px;
+}
+
+.info {
+  width: 75vw;
+  margin: 0 auto;
+}
+
+.info h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding-right: 1em;
+  margin-bottom: 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+.info p:first-of-type {
+  padding-top: 2em;
+}
+
+.info p:last-of-type {
+  padding-bottom: 2em;
 }
 
 /********************** HEADER SECTION **********************/
@@ -65,9 +97,7 @@ a {
 
 
 /********************** HOME SECTION **********************/
-.home {
-  background: lightblue;
-}
+
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio .links {
@@ -79,7 +109,18 @@ a {
   /* border-radius: 5px 5px 0 0; */
 }
 
+/****** WEB ******/
+.portfolio .web .portfolio-images img {
+  width: 75vw;
+  box-shadow: none;
+}
 
+#web {
+  display: block;
+}
+
+
+/****** IMAGES ******/
 .portfolio-images {
   background: linear-gradient(to bottom, rgb(216, 216, 216), rgba(216,216,216,.25));
   padding: 1em 0;
@@ -156,34 +197,13 @@ a {
   margin-bottom: 5em;
 }
 
-.portfolio .visual h2 {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  padding: .25em;
-  width: 75%;
-}
-
-.portfolio .visual p {
-  padding: 0em 2em;
-}
-
-.portfolio .visual p:first-of-type {
-  padding-top: 2em;
-}
-
-.portfolio .visual p:last-of-type {
-  padding-bottom: 2em;
-}
-
+/****** AUDIO ******/
 
 /********************** ABOUT SECTION **********************/
-.about {
-  background: lightblue;
-}
+
 
 /********************** CONTACT SECTION **********************/
-.contact {
-  background: lightcyan;
-}
+
 
 /********************** SOCIAL MEDIA SECTION **********************/
 
@@ -194,6 +214,7 @@ a {
 .social-media svg {
   width: 5em;
   height: auto;
+  padding: 0 1em;
 }
 
 
@@ -201,8 +222,6 @@ a {
 /********************** FOOTER SECTION **********************/
 
 .footer {
-  /* background: rgba(216, 232, 238, 0.75); */
-  /* width: 100vw; */
   text-align: center;
   padding: .5em;
 }
