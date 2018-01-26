@@ -25,7 +25,7 @@ export default class Visual extends Component {
         </div>
         
         <div className="links">
-          <NavLink to="/">Print</NavLink>
+          <NavLink exact to="/">Print</NavLink>
           <NavLink to="/digital" >Digital</NavLink>
         </div>
 

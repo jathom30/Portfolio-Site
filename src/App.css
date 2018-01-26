@@ -75,6 +75,7 @@ a {
   color: black;
   padding: 1em .5em;
   width: 33%;
+  cursor: pointer;
 }
 
 .links a:hover {
@@ -113,10 +114,6 @@ a {
 .portfolio .web .portfolio-images img {
   width: 75vw;
   box-shadow: none;
-}
-
-#web {
-  display: block;
 }
 
 

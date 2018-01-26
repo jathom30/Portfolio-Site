@@ -1,10 +1,69 @@
 import React, { Component } from 'react';
-import { NavLink } from "react-router-dom";
-
-// import WebSamples from './WebSamples';
 
 export default class Web extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      addClass: false,
+    }
+    this.showSTN = this.showSTN.bind(this);
+    this.showAngel = this.showAngel.bind(this);
+    this.showSignature = this.showSignature.bind(this);
+  }
+
+  showSTN() {
+    let target = document.getElementById('stn');
+    let notTarget1 = document.getElementById('signature');
+    let notTarget2 = document.getElementById('angel');
+    let targetBtn = document.getElementById('stn-btn');
+    let notTargetBtn1 = document.getElementById('signature-btn');
+    let notTargetBtn2 = document.getElementById('angel-btn');
+
+    targetBtn.classList.add('active');
+    notTargetBtn1.classList.remove('active');
+    notTargetBtn2.classList.remove('active');
+
+    target.style.display = 'block';
+    notTarget1.style.display = 'none';
+    notTarget2.style.display = 'none';
+  }
+
+  showAngel() {
+    let target = document.getElementById('angel');
+    let notTarget1 = document.getElementById('signature');
+    let notTarget2 = document.getElementById('stn');
+    let targetBtn = document.getElementById('angel-btn');
+    let notTargetBtn1 = document.getElementById('stn-btn');
+    let notTargetBtn2 = document.getElementById('signature-btn');
+
+    targetBtn.classList.add('active');
+    notTargetBtn1.classList.remove('active');
+    notTargetBtn2.classList.remove('active');
+
+    target.style.display = 'block';
+    notTarget1.style.display = 'none';
+    notTarget2.style.display = 'none';
+  }
+
+  showSignature() {
+    let target = document.getElementById('signature');
+    let notTarget1 = document.getElementById('stn');
+    let notTarget2 = document.getElementById('angel');
+    let targetBtn = document.getElementById('signature-btn');
+    let notTargetBtn1 = document.getElementById('stn-btn');
+    let notTargetBtn2 = document.getElementById('angel-btn');
+
+    targetBtn.classList.add('active');
+    notTargetBtn1.classList.remove('active');
+    notTargetBtn2.classList.remove('active');
+
+    target.style.display = 'block';
+    notTarget1.style.display = 'none';
+    notTarget2.style.display = 'none';
+  }
+
   render() {
+
     return(
       <div className="web">
         <div className="info">
@@ -14,11 +73,15 @@ export default class Web extends Component {
         </div>
 
         <div className="links">
-          <NavLink to="/stn">STN</NavLink>
+          <a id="stn-btn" onClick={ this.showSTN } className="active">STN</a>
+          <a id="angel-btn" onClick={ this.showAngel } >Angel</a>
+          <a id="signature-btn" onClick={ this.showSignature } >Signature</a>
         </div>
 
         <div className="portfolio-images">
-          <img src="./images/smallTimeNapoleonDuo.png" alt="" />
+          <a href="http://smalltimenapoleon.com" ><img id="stn" src="./images/smallTimeNapoleonDuo.png" alt="" /></a>
+          <a href="http://jathom30.github.io/signature-yearbook-pricing-guide/"><img style={ {display: 'none'} }id="signature" src="./images/SignatureDuo.png" alt="" /></a>
+          <img style={ {display: 'none'} }id="angel" src="./images/tomwaits.jpg" alt="" />
         </div>
       </div>
     )
