@@ -99,6 +99,10 @@ a {
 
 /********************** HOME SECTION **********************/
 
+.test {
+  background: lightcyan;
+}
+
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio .links {
@@ -129,6 +133,7 @@ a {
   align-items: center;
   border-radius: 0 0 5px 5px;
   overflow: hidden;
+  text-align: center;
 }
 
 .portfolio-images img {
@@ -183,11 +188,10 @@ a {
   text-align: center;
 }
 
-.enhance .full-image {
-  width: 75%;
+.portfolio-images .full-image {
+  width: 75vw;
   height: auto;
   margin: 0 auto;
-  display: block;
 }
 
 .portfolio .visual {

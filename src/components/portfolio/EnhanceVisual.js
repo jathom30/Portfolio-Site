@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Image from './Image';
 
@@ -17,5 +18,13 @@ const EnhanceVisual = (props) => {
     </div>
   );
 }
+
+EnhanceVisual.propTypes = {
+  title: PropTypes.string,
+  return: PropTypes.string,
+  image: PropTypes.string,
+  alt: PropTypes.string,
+  key: PropTypes.string,
+};
 
 export default EnhanceVisual;

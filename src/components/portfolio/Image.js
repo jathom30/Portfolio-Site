@@ -1,13 +1,20 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
 
-const Image = (props) => (
-  <div className="portfolio-images enhance">
-      <NavLink to={ props.return }>
-        <img src={ props.image } alt={ props.alt } className="full-image" />
-      </NavLink>
-      <h3>{ props.title }</h3>
-    </div>
-);
+export default class Image extends Component {
+  render() {
+    const {imageClicked, data} = this.state;
 
-export default Image;
+    return (
+      <div>
+        this is the thing
+        <img 
+            className={imageClicked ? 'full-image' : ''} 
+            onClick={this.hideImage} 
+            src={data.image} 
+            alt={data.alt}
+          />
+          <h2>{ data.title }</h2>
+      </div>
+    );
+  }
+}
