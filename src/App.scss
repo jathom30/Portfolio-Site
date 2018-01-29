@@ -1,11 +1,14 @@
 /********************** BACIS SETUP **********************/
 html {
-  font-family: 'Raleway', sans-serif; }
+  font-family: 'Raleway', sans-serif;
+}
+
 
 h1 {
   text-align: center;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -14,29 +17,41 @@ h2 {
   display: inline-block;
   text-transform: uppercase;
   font-size: 1em;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+}
 
 a {
   text-decoration: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 .main {
   padding: 1em .5em;
   min-height: 75vh;
-  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25)); }
-  .main h1 {
+  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25));
+  h1 {
     padding: 1em;
     margin: 0 1em;
-    letter-spacing: 5px; }
+    letter-spacing: 5px;
+  }
+}
+
 
 .info {
   width: 75vw;
-  margin: 0 auto; }
-  .info p:first-of-type {
-    padding-top: 2em; }
-  .info p:last-of-type {
-    padding-bottom: 2em; }
+  margin: 0 auto;
+
+  p {
+    &:first-of-type {
+      padding-top: 2em;
+    }
+    &:last-of-type {
+      padding-bottom: 2em;
+    }
+  }
+}
+
 
 /********************** HEADER SECTION **********************/
 .header svg {
@@ -44,47 +59,62 @@ a {
   height: auto;
   display: block;
   margin: 0 auto;
-  padding: 1em; }
+  padding: 1em;
+}
 
 .links {
   text-align: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: space-between; }
-  .links a {
+  justify-content: space-between;
+
+  a {
     text-transform: uppercase;
     color: black;
     padding: 1em .5em;
     width: 33%;
-    cursor: pointer; }
-    .links a:hover {
-      background: rgba(224, 224, 224, 0.15); }
-    .links a.active {
-      background: rgba(224, 224, 224, 0.5); }
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(224, 224, 224, 0.15);
+    }
+    &.active {
+      background: rgba(224,224,224,.5);
+    }
+  }
+}
+
 
 /********************** HOME SECTION **********************/
+
+
 /********************** PORTFOLIO SECTION **********************/
 .portfolio .links {
-  border-top: none; }
-  .portfolio .links a {
-    width: 50%; }
+  border-top: none;
+  a {
+    width: 50%;
+  }
+}
 
 /****** WEB ******/
 .portfolio .web .portfolio-images img {
   width: 75vw;
   box-shadow: none;
-  transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) 0.3s all; }
-  .portfolio .web .portfolio-images img:hover {
+  transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) .3s all;
+  &:hover {
     filter: brightness(1.1);
     transform: scale(1.05);
-    transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) 0.3s all; }
+    transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) .3s all;
+  }
+}
+
 
 /****** IMAGES ******/
 .portfolio-images {
-  background: linear-gradient(to bottom, #d8d8d8, rgba(216, 216, 216, 0.25));
+  background: linear-gradient(to bottom, rgb(216, 216, 216), rgba(216,216,216,.25));
   padding: 1em 0;
-  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25) inset;
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, .25) inset;
   min-height: 25vh;
   display: flex;
   flex-direction: row;
@@ -92,67 +122,97 @@ a {
   align-items: center;
   border-radius: 0 0 5px 5px;
   overflow: hidden;
-  text-align: center; }
-  .portfolio-images h2 {
-    border: none; }
-  .portfolio-images.enhance {
+  text-align: center;
+  h2 {
+    border: none;
+  }
+
+  &.enhance {
     display: block;
-    text-align: center; }
-  .portfolio-images .full-image {
+    text-align: center;
+  }
+
+  .full-image {
     width: 75vw;
     height: auto;
-    margin: 0 auto; }
-  .portfolio-images:hover .left {
-    transform: rotate(0);
-    transition: .5s ease-out; }
-  .portfolio-images:hover .center {
-    transform: translateY(0);
-    transition: .5s ease-in; }
-  .portfolio-images:hover .right {
-    transform: rotate(0);
-    transition: .5s ease-out; }
-  .portfolio-images img {
-    width: 29vw;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    .left {
+      transform: rotate(0);
+      transition: .5s ease-out;
+    }
+    .center {
+      transform: translateY(0);
+      transition: .5s ease-in;
+    }
+    .right {
+      transform: rotate(0);
+      transition: .5s ease-out;
+    }
+  }
+
+  img {
+    width:29vw;
     height: auto;
-    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, 0.25);
-    cursor: pointer; }
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, .25);
+    cursor: pointer;
+  }
+}
 
 .left, .center, .right {
   display: inline-block;
   transition: .25s ease-in-out;
   padding: 5px;
-  border-radius: 3px; }
+  border-radius: 3px;
+}
 
 .left {
   transform: rotate(-20deg) translateX(2em) translateY(1em);
-  z-index: 2; }
+  z-index: 2;
+}
 
 .center {
-  transform: rotate(5deg) translateY(0.5em);
-  z-index: 1; }
+  transform: rotate(5deg) translateY(.5em);
+  z-index: 1;
+}
 
 .right {
   transform: rotate(20deg) translateX(-2em) translateY(1em);
-  z-index: 0; }
+  z-index: 0;
+}
 
 .left:hover, .center:hover, .right:hover {
-  background: white; }
+  background: white;
+}
 
 .portfolio .visual {
-  margin-bottom: 5em; }
+  margin-bottom: 5em;
+}
 
 /****** AUDIO ******/
+
 /********************** ABOUT SECTION **********************/
+
+
 /********************** CONTACT SECTION **********************/
+
+
 /********************** SOCIAL MEDIA SECTION **********************/
+
 .social-media {
-  text-align: center; }
-  .social-media svg {
+  text-align: center;
+  svg {
     width: 5em;
     height: auto;
-    padding: 0 1em; }
+    padding: 0 1em;
+  }
+}
 
 /********************** FOOTER SECTION **********************/
+
 .footer {
   text-align: center;
-  padding: .5em; }
+  padding: .5em;
+}
