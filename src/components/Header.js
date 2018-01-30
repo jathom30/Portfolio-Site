@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 
 import JeffThomasLogo from '../assets/JeffThomasLogo';
 
@@ -11,9 +10,9 @@ const Header = () => {
       <JeffThomasLogo />
 
       <div className="links">
-        <Link to="#portfolio">portfolio</Link>
-        <Link to="#about">about</Link>
-        <Link to="#contact">contact</Link>
+        <a href="#portfolio">portfolio</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
       </div>
 
     </div>

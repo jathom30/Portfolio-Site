@@ -1,3 +1,16 @@
+$blue-purple: linear-gradient(to top, rgb(77, 10, 153), rgb(63, 185, 255));
+$purple-blue: linear-gradient(to bottom, rgb(77, 10, 153), rgb(63, 185, 255));
+
+
+@mixin medium-box {
+  background: $blue-purple;
+  border-radius: 3px;
+  box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, .5);
+  color: white;
+}
+
+
+
 /********************** BACIS SETUP **********************/
 html {
   font-family: 'Raleway', sans-serif;
@@ -27,9 +40,10 @@ a {
 }
 
 .main {
-  padding: 1em .5em;
   min-height: 75vh;
-  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25));
+  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25), rgba(200,230,246,0));
+  // background: linear-gradient(to bottom, rgba(63, 185, 255,1), rgb(3, 255, 171),  rgba(63, 185, 255,1));
+  padding-bottom: 2em;
   h1 {
     padding: 1em;
     margin: 0 1em;
@@ -87,32 +101,42 @@ a {
 
 
 /********************** HOME SECTION **********************/
-
+.home {
+  padding: 1em .5em;
+}
 
 /********************** PORTFOLIO SECTION **********************/
-.portfolio .links {
-  border-top: none;
-  a {
-    width: 50%;
+.portfolio {
+  .links {
+    border-top: none;
+    a {
+      width: 50%;
+    }
   }
 }
 
 /****** WEB ******/
+.web {
+  padding: 1em .5em;
+}
 .portfolio .web .portfolio-images img {
   width: 75vw;
   box-shadow: none;
   transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) .3s all;
   &:hover {
-    filter: brightness(1.1);
-    transform: scale(1.05);
-    transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) .3s all;
+    filter: brightness(1.15);
+    transition: ease-out 0s all;
   }
 }
 
 
 /****** IMAGES ******/
+.visual {
+  padding: 1em .5em;
+}
 .portfolio-images {
-  background: linear-gradient(to bottom, rgb(216, 216, 216), rgba(216,216,216,.25));
+  // background: linear-gradient(to bottom, rgb(216, 216, 216), rgba(216,216,216,.25));
+  background: $purple-blue;
   padding: 1em 0;
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, .25) inset;
   min-height: 25vh;
@@ -154,7 +178,7 @@ a {
   }
 
   img {
-    width:29vw;
+    width:100%;
     height: auto;
     box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, .25);
     cursor: pointer;
@@ -163,6 +187,7 @@ a {
 
 .left, .center, .right {
   display: inline-block;
+  width: 25vw;
   transition: .25s ease-in-out;
   padding: 5px;
   border-radius: 3px;
@@ -184,7 +209,7 @@ a {
 }
 
 .left:hover, .center:hover, .right:hover {
-  background: white;
+  filter: brightness(1.15);
 }
 
 .portfolio .visual {
@@ -192,21 +217,193 @@ a {
 }
 
 /****** AUDIO ******/
+.audio {
+  position: relative;
+  overflow: hidden;
+  // padding: 0; important
+  .info {
+    padding: 1em .5em;
+  }
+  .gretsch {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+    // z-index: -1;
+  }
+  .iframes {
+    padding: 0 .5em;
+  }
+  
+}
 
 /********************** ABOUT SECTION **********************/
+.about {
+  padding: 1em .5em;
+  .jeff-thomas {
+    position: relative;
+    display: inline-block;
+    float: left;
+    padding-right: 1em;
+    padding-bottom: 5px;
+    img {
+      width: 30vw;
+      height: auto;
+      display: block;
+    }
+    h2 {
+      position: absolute;
+      bottom: 5px;
+      left: 5px;
+      border: none;
+      color: white;
+    }
+  }
+  .bio {
+    padding: 0;
+    margin: 0;
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      padding-top: 0;
+    }
+  }
+  .info:last-of-type {
+    p {
+      padding-top: 0;
+    }
+  }
+  .education {
+    ul {
+      padding: 0;
+      li {
+        list-style: square outside none;
+        padding-bottom: 1em;
+      }
+    }
+    
+  }
+  .languages-programs {
+    @include medium-box();
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1em;
+    h2 {
+      // background: white;
+      padding: 0 0 .5em;
+      margin-top: 0;
+      width: 100%;
+    }
+    p {
+      margin: 0;
+      margin-top: .5em;
+    }
+    .languages {
+      h2 {
+        padding-right: 0;
+      }
+    }
 
+    .programs {
+      text-align: right;
+      h2 {
+        padding-left: 0;
+
+      }
+    }
+  }
+  .availability {
+    padding-top: 2em;
+  }
+}
 
 /********************** CONTACT SECTION **********************/
-
+.contact {
+  padding: 1em .5em;
+  form {
+    @include medium-box();
+    padding: 0 0 1em;
+    margin-bottom: 4em;
+    h4 {
+      text-transform: uppercase;
+      margin: 0;
+      padding: 1em 1em 0;
+    }
+    p {
+      padding-left: 1em;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+    input, textarea {
+      width: 100%;
+      border: none;
+      padding: .5em 0;
+      border-bottom: 2px solid rgb(16, 217, 231);
+      background: white;
+      text-align: center;
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid rgb(255, 187, 0);
+      }
+      
+    }
+    #submit {
+      background: rgb(63, 185, 255);
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+      border-bottom: 2px solid rgb(14, 161, 180);
+      color: white;
+      &:hover {
+        background: rgb(0, 225, 255);
+        cursor: pointer;
+      }
+    }
+  }
+  fieldset {
+    border: none;
+  }
+  .contact-links {
+    @include medium-box();
+    min-width: auto;
+    // background: pink;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    padding-bottom: 1em;
+    h3 {
+      grid-column: span 2;
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0.5em;
+    }
+    p {
+      margin: .25em;
+    }
+    .right-text {
+      // background: lightgoldenrodyellow;
+      text-align: right;
+      padding-right: .5em;
+    }
+    a {
+      color: white;
+    }
+  }
+}
 
 /********************** SOCIAL MEDIA SECTION **********************/
 
 .social-media {
   text-align: center;
   svg {
-    width: 5em;
+    width: 20vw;
     height: auto;
-    padding: 0 1em;
+    padding: 0 .5em;
   }
 }
 

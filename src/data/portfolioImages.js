@@ -15,7 +15,7 @@ export const ChurchillData = {
   };
 
 export const BinetData = {
-    title: 'Binet Yearbook 2017',
+    title: 'Binet Yearbook 2018',
     alt: 'Binet Yearbook Cover',
     image: './images/BinetCover.jpg',
     return: '/',
