@@ -38,14 +38,16 @@ export default class Web extends Component {
           <p>As a result, I am proficient in HTML, CSS/SCSS, JavaScript, JQuery, React, and Python/Django. My projects have been used for Jeffersontown Police's Angel Program, Signature Studio, Small Time Napoleon, and other personal projects.</p>
         </div>
 
-        <div className="links">
-          <a onClick={this.changeImage} className={data.id === 'web-1' ? 'active' : ''} id="stn">Small Time Napoleon</a>
-          <a onClick={this.changeImage} className={data.id === 'web-2' ? 'active' : ''} id="angel">The Angel Program</a>
-          <a onClick={this.changeImage} className={data.id === 'web-3' ? 'active' : ''} id="signature">Signature Yearbooks</a>
-        </div>
+        <div className="box">
+          <div className="links">
+            <a onClick={this.changeImage} className={data.id === 'web-1' ? 'active' : ''} id="stn">Small Time Napoleon</a>
+            <a onClick={this.changeImage} className={data.id === 'web-2' ? 'active' : ''} id="angel">The Angel Program</a>
+            <a onClick={this.changeImage} className={data.id === 'web-3' ? 'active' : ''} id="signature">Signature Yearbooks</a>
+          </div>
 
-        <div className="portfolio-images">
-          <a href={`http://${data.imgLink}`}><img src={ `./images/${data.imgSrc}`} alt={data.altTitle}/></a>
+          <div className="portfolio-images">
+            <a href={`http://${data.imgLink}`}><img src={ `./images/${data.imgSrc}`} alt={data.altTitle}/></a>
+          </div>
         </div>
       </div>
     );

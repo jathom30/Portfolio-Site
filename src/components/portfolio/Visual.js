@@ -40,13 +40,15 @@ export default class Visual extends Component {
           <p>During this same time, I've created several show posters for Small Time Napoleon. Apart from creating our posters, I've created all our branding and merchandise imagery, allowing a gradual and consistent evolution of the band's brand.</p>
         </div>
 
-        <div className="links">
-          <a onClick={this.changeSection} className={hasClass ? 'active' : ''} id="print">print</a>
-          <a onClick={this.changeSection} className={!hasClass ? 'active' : ''} id="digital">digital</a>
-        </div>
+        <div className="box">
+          <div className="links">
+            <a onClick={this.changeSection} className={hasClass ? 'active' : ''} id="print">print</a>
+            <a onClick={this.changeSection} className={!hasClass ? 'active' : ''} id="digital">digital</a>
+          </div>
 
-        <div>
-          {page}
+          <div>
+            {page}
+          </div>
         </div>
 
       </div>

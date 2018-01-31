@@ -7,7 +7,7 @@ export default class ContactForm extends Component {
       name: '',
       email: '',
       message: '',
-      animation: false,
+      filled: false,
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);
@@ -36,10 +36,15 @@ export default class ContactForm extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    if (this.state.name.length !== 0 && this.state.email.length !== 0 && this.state.message.length !== 0) {
+      this.setState({
+        filled: true,
+      });
+    }
   }
 
   render() {
-    const {name, email, message} = this.state;
+    const {name, email, message, filled} = this.state;
     return (
       <div>
         <form method="POST" onSubmit={this.handleSubmit}>
@@ -54,7 +59,7 @@ export default class ContactForm extends Component {
           <fieldset>
             <textarea value={message} onChange={this.handleMessageChange} placeholder="hello..."/>
           </fieldset>
-          <input id="submit" type="submit" name="submit" />
+          <input id="submit" type="submit" name="submit" value={filled ? "Submit" : "More Info Needed"} />
         </form>
       </div>
     );

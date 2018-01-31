@@ -1,9 +1,13 @@
-$blue-purple: linear-gradient(to top, rgb(77, 10, 153), rgb(63, 185, 255));
-$purple-blue: linear-gradient(to bottom, rgb(77, 10, 153), rgb(63, 185, 255));
+$blue: rgb(63,185,255);
+$purple: rgb(77,10,153);
+$green: rgb(3, 255, 171);
+$blue-green: linear-gradient(to top, $blue, $green);
+$blue-and-purple: rgb(63, 108, 255);
+$blue-purple: linear-gradient(to top, $purple, $blue);
+$purple-blue: linear-gradient(to bottom, $purple, $blue);
 
-
-@mixin medium-box {
-  background: $blue-purple;
+@mixin show-box {
+  background: $purple-blue;
   border-radius: 3px;
   box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, .5);
   color: white;
@@ -41,9 +45,10 @@ a {
 
 .main {
   min-height: 75vh;
-  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25), rgba(200,230,246,0));
+  // background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25), rgba(200,230,246,0));
   // background: linear-gradient(to bottom, rgba(63, 185, 255,1), rgb(3, 255, 171),  rgba(63, 185, 255,1));
   padding-bottom: 2em;
+  // color: white;
   h1 {
     padding: 1em;
     margin: 0 1em;
@@ -66,6 +71,9 @@ a {
   }
 }
 
+.box {
+  @include show-box();
+}
 
 /********************** HEADER SECTION **********************/
 .header svg {
@@ -82,19 +90,20 @@ a {
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
-
+  
   a {
     text-transform: uppercase;
-    color: black;
+    color: white;
     padding: 1em .5em;
     width: 33%;
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.25);
 
     &:hover {
-      background: rgba(224, 224, 224, 0.15);
+      background: rgba(255, 255, 255, 0.15);
     }
     &.active {
-      background: rgba(224,224,224,.5);
+      background: rgba(255, 255, 255, 0);
     }
   }
 }
@@ -103,6 +112,9 @@ a {
 /********************** HOME SECTION **********************/
 .home {
   padding: 1em .5em;
+  h1 {
+    font-weight: 700;
+  }
 }
 
 /********************** PORTFOLIO SECTION **********************/
@@ -135,8 +147,7 @@ a {
   padding: 1em .5em;
 }
 .portfolio-images {
-  // background: linear-gradient(to bottom, rgb(216, 216, 216), rgba(216,216,216,.25));
-  background: $purple-blue;
+  // background: $purple-blue;
   padding: 1em 0;
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, .25) inset;
   min-height: 25vh;
@@ -287,7 +298,7 @@ a {
     
   }
   .languages-programs {
-    @include medium-box();
+    @include show-box();
     display: grid;
     grid-template-columns: 50% 50%;
     width: 80vw;
@@ -326,7 +337,7 @@ a {
 .contact {
   padding: 1em .5em;
   form {
-    @include medium-box();
+    @include show-box();
     padding: 0 0 1em;
     margin-bottom: 4em;
     h4 {
@@ -353,14 +364,14 @@ a {
       
     }
     #submit {
-      background: rgb(63, 185, 255);
+      background: linear-gradient(to left, $purple, rgb(58, 1, 122));
       width: 75%;
       display: block;
       margin: 0 auto;
-      border-bottom: 2px solid rgb(14, 161, 180);
+      border-bottom: 2px solid rgb(58, 1, 122);
       color: white;
       &:hover {
-        background: rgb(0, 225, 255);
+        background: rgb(58, 1, 122);
         cursor: pointer;
       }
     }
@@ -369,7 +380,7 @@ a {
     border: none;
   }
   .contact-links {
-    @include medium-box();
+    @include show-box();
     min-width: auto;
     // background: pink;
     display: grid;
@@ -404,6 +415,15 @@ a {
     width: 20vw;
     height: auto;
     padding: 0 .5em;
+    #icon-circle {
+      fill: $blue-and-purple;
+    }
+    #icon-shadow {
+      fill: $purple;
+    }
+    #icon-face {
+      fill: $blue;
+    }    
   }
 }
 

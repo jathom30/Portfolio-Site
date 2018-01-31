@@ -23,7 +23,6 @@ a {
 
 .main {
   min-height: 75vh;
-  background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25), rgba(200, 230, 246, 0));
   padding-bottom: 2em; }
   .main h1 {
     padding: 1em;
@@ -37,6 +36,12 @@ a {
     padding-top: 2em; }
   .info p:last-of-type {
     padding-bottom: 2em; }
+
+.box {
+  background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+  border-radius: 3px;
+  box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
+  color: white; }
 
 /********************** HEADER SECTION **********************/
 .header svg {
@@ -54,18 +59,21 @@ a {
   justify-content: space-between; }
   .links a {
     text-transform: uppercase;
-    color: black;
+    color: white;
     padding: 1em .5em;
     width: 33%;
-    cursor: pointer; }
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.25); }
     .links a:hover {
-      background: rgba(224, 224, 224, 0.15); }
+      background: rgba(255, 255, 255, 0.15); }
     .links a.active {
-      background: rgba(224, 224, 224, 0.5); }
+      background: rgba(255, 255, 255, 0); }
 
 /********************** HOME SECTION **********************/
 .home {
   padding: 1em .5em; }
+  .home h1 {
+    font-weight: 700; }
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio .links {
@@ -90,7 +98,6 @@ a {
   padding: 1em .5em; }
 
 .portfolio-images {
-  background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
   padding: 1em 0;
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.25) inset;
   min-height: 25vh;
@@ -200,7 +207,7 @@ a {
       list-style: square outside none;
       padding-bottom: 1em; }
   .about .languages-programs {
-    background: linear-gradient(to top, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -229,7 +236,7 @@ a {
 .contact {
   padding: 1em .5em; }
   .contact form {
-    background: linear-gradient(to top, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -254,19 +261,19 @@ a {
         outline: none;
         border-bottom: 2px solid #ffbb00; }
     .contact form #submit {
-      background: #3fb9ff;
+      background: linear-gradient(to left, #4d0a99, #3a017a);
       width: 75%;
       display: block;
       margin: 0 auto;
-      border-bottom: 2px solid #0ea1b4;
+      border-bottom: 2px solid #3a017a;
       color: white; }
       .contact form #submit:hover {
-        background: #00e1ff;
+        background: #3a017a;
         cursor: pointer; }
   .contact fieldset {
     border: none; }
   .contact .contact-links {
-    background: linear-gradient(to top, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -295,6 +302,12 @@ a {
     width: 20vw;
     height: auto;
     padding: 0 .5em; }
+    .social-media svg #icon-circle {
+      fill: #3f6cff; }
+    .social-media svg #icon-shadow {
+      fill: #4d0a99; }
+    .social-media svg #icon-face {
+      fill: #3fb9ff; }
 
 /********************** FOOTER SECTION **********************/
 .footer {
