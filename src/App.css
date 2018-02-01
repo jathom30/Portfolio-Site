@@ -5,7 +5,8 @@ html {
 h1 {
   text-align: center;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-size: 3em; }
 
 h2 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -25,13 +26,14 @@ a {
   min-height: 75vh;
   padding-bottom: 2em; }
   .main h1 {
-    padding: 1em;
+    padding: 1em 0;
     margin: 0 1em;
     letter-spacing: 5px; }
 
 .info {
-  width: 75vw;
-  margin: 0 auto; }
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0 1em; }
   .info p:first-of-type {
     padding-top: 2em; }
   .info p:last-of-type {
@@ -76,6 +78,13 @@ a {
     font-weight: 700; }
 
 /********************** PORTFOLIO SECTION **********************/
+.portfolio .main-header {
+  background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+  padding: 5em 0; }
+  .portfolio .main-header h1 {
+    padding: 0;
+    color: white; }
+
 .portfolio .links {
   border-top: none; }
   .portfolio .links a {
@@ -84,6 +93,9 @@ a {
 /****** WEB ******/
 .web {
   padding: 1em .5em; }
+  .web .info {
+    background: white;
+    padding: 0 .5em; }
 
 .portfolio .web .portfolio-images img {
   width: 75vw;
@@ -176,29 +188,44 @@ a {
 /********************** ABOUT SECTION **********************/
 .about {
   padding: 1em .5em; }
-  .about .jeff-thomas {
-    position: relative;
-    display: inline-block;
-    float: left;
-    padding-right: 1em;
-    padding-bottom: 5px; }
-    .about .jeff-thomas img {
-      width: 30vw;
-      height: auto;
-      display: block; }
-    .about .jeff-thomas h2 {
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      border: none;
-      color: white; }
   .about .bio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 46px) auto;
     padding: 0;
     margin: 0; }
-    .about .bio h2 {
-      margin-top: 0; }
+    .about .bio .jeff-thomas {
+      position: relative;
+      grid-row: span 3;
+      overflow: hidden; }
+      .about .bio .jeff-thomas .jeff-thomas-bg {
+        height: 138px;
+        width: auto; }
+      .about .bio .jeff-thomas h2 {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: white; }
+    .about .bio .title {
+      text-align: left;
+      padding: 0;
+      margin-top: 0;
+      margin-left: 10px;
+      font-size: 2em;
+      grid-column: span 2; }
+    .about .bio .highlight {
+      font-weight: bold;
+      margin: auto 0;
+      margin-left: 10px;
+      font-size: 1.25em;
+      grid-column: span 2;
+      grid-row: span 2; }
     .about .bio p {
-      padding-top: 0; }
+      padding-top: 0;
+      grid-column: span 3; }
   .about .info:last-of-type p {
     padding-top: 0; }
   .about .education ul {
@@ -301,12 +328,15 @@ a {
   .social-media svg {
     width: 20vw;
     height: auto;
-    padding: 0 .5em; }
-    .social-media svg #icon-circle {
+    padding: 0 .5em;
+    transition: transform cubic-bezier(0.62, -0.4, 0.49, 1.01) 0.3s; }
+    .social-media svg:hover {
+      transform: scale(1.2); }
+    .social-media svg .icon-circle {
       fill: #3f6cff; }
-    .social-media svg #icon-shadow {
+    .social-media svg .icon-shadow {
       fill: #4d0a99; }
-    .social-media svg #icon-face {
+    .social-media svg .icon-face {
       fill: #3fb9ff; }
 
 /********************** FOOTER SECTION **********************/

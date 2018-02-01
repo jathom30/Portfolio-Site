@@ -25,6 +25,7 @@ h1 {
   text-align: center;
   padding: 0;
   margin: 0;
+  font-size: 3em;
 }
 
 h2 {
@@ -50,7 +51,7 @@ a {
   padding-bottom: 2em;
   // color: white;
   h1 {
-    padding: 1em;
+    padding: 1em 0;
     margin: 0 1em;
     letter-spacing: 5px;
   }
@@ -58,8 +59,9 @@ a {
 
 
 .info {
-  width: 75vw;
+  width: 80vw;
   margin: 0 auto;
+  padding: 0 1em;
 
   p {
     &:first-of-type {
@@ -119,6 +121,14 @@ a {
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio {
+  .main-header {
+    background: $purple-blue;
+    padding: 5em 0;
+    h1 {
+      padding: 0;
+      color: white;
+    }
+  }
   .links {
     border-top: none;
     a {
@@ -129,7 +139,13 @@ a {
 
 /****** WEB ******/
 .web {
+  // margin-top: -3em;
   padding: 1em .5em;
+  // background: white;
+  .info {
+    background: white;
+    padding: 0 .5em;
+  }
 }
 .portfolio .web .portfolio-images img {
   width: 75vw;
@@ -231,7 +247,6 @@ a {
 .audio {
   position: relative;
   overflow: hidden;
-  // padding: 0; important
   .info {
     padding: 1em .5em;
   }
@@ -253,33 +268,52 @@ a {
 /********************** ABOUT SECTION **********************/
 .about {
   padding: 1em .5em;
-  .jeff-thomas {
-    position: relative;
-    display: inline-block;
-    float: left;
-    padding-right: 1em;
-    padding-bottom: 5px;
-    img {
-      width: 30vw;
-      height: auto;
-      display: block;
-    }
-    h2 {
-      position: absolute;
-      bottom: 5px;
-      left: 5px;
-      border: none;
-      color: white;
-    }
-  }
   .bio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 46px) auto;
     padding: 0;
     margin: 0;
-    h2 {
+    .jeff-thomas {
+      position: relative;
+      // float: left;
+      // padding-right: 1em;
+      // padding-bottom: 5px;
+      grid-row: span 3;
+      overflow: hidden;
+      .jeff-thomas-bg {
+        height: 138px;
+        width: auto;
+      }
+      h2 {
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        padding: 0;
+        margin: 0;
+        border: none;
+        color: white;
+      }
+    }
+    .title {
+      text-align: left;
+      padding: 0;
       margin-top: 0;
+      margin-left: 10px;
+      font-size: 2em;
+      grid-column: span 2;
+    }
+    .highlight {
+      font-weight: bold;
+      margin: auto 0;
+      margin-left: 10px;
+      font-size: 1.25em;
+      grid-column: span 2;
+      grid-row: span 2;
     }
     p {
       padding-top: 0;
+      grid-column: span 3;
     }
   }
   .info:last-of-type {
@@ -415,17 +449,22 @@ a {
     width: 20vw;
     height: auto;
     padding: 0 .5em;
-    #icon-circle {
+    transition: transform cubic-bezier(0.62,-0.4, 0.49, 1.01) .3s;
+    &:hover {
+      transform: scale(1.2);
+    }
+    .icon-circle {
       fill: $blue-and-purple;
     }
-    #icon-shadow {
+    .icon-shadow {
       fill: $purple;
     }
-    #icon-face {
+    .icon-face {
       fill: $blue;
     }    
   }
 }
+
 
 /********************** FOOTER SECTION **********************/
 

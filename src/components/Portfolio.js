@@ -9,7 +9,9 @@ export default class Portfolio extends Component {
   render() {
     return(
       <div className="portfolio main" id="portfolio">
-        <h1>Portfolio</h1>
+        <div className="main-header">
+          <h1>Portfolio</h1>
+        </div>
         <Web />
         <Visual />
         <Audio />
