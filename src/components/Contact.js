@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
+import Spacer from './Spacer';
 import ContactForm from './ContactForm';
+
+import rocksContact from '../assets/rocksContact.jpg';
 
 export default class Contact extends Component {
   render() {
     return (
-      <div className="contact main">
-        <h1>Contact</h1>
+      <div className="contact main" id="contact">
+        <Spacer backgroundImage={rocksContact} />
+        {/* <h1>Contact</h1> */}
         <ContactForm />
           
         <div className="contact-links">

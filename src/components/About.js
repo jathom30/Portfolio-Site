@@ -1,31 +1,35 @@
 import React from 'react';
+import Spacer from './Spacer';
 
-import Background from '../assets/jeffThomas.jpg';
+import jeffThomas from '../assets/jeffThomas.jpg';
+import rocksAbout from '../assets/rocksAbout.jpg';
 
-const backgroundStyle = {
-  background: 'url(' +Background + ') blue',
+const headshotBackground = {
+  background: 'url(' + jeffThomas + ') blue',
   backgroundOrigin: 'center',
   backgroundPosition: 'center',
   backgroundRepeat: 'no-repeat',
   backgroundSize: 'cover',
-}
+};
+
 
 const About = () => {
   return (
-    <div className="about main" id="about">
-      <h1>About</h1>
+    <div id="about">
+    <Spacer backgroundImage={rocksAbout} />
+    <div className="about main" >
 
       <div className="info">
         <div className="bio-area">
           <div className="bio">
             <div className="jeff-thomas">
-              <div className="jeff-thomas-bg" style={ backgroundStyle } ></div>
+              <div className="jeff-thomas-bg" style={ headshotBackground } ></div>
               <h2>Jeff Thomas</h2>
             </div>
             <h2 className="title">Bio</h2>
             <p className="highlight">Jeff Thomas is an unashamed Junkrat main.</p> 
             <p>He graduated from the University of Louisville with a BA in Jazz Studies with an emphasis in Guitar in 2011. Since then he has enjoyed playing in Louisville based jazz band, Small Time Napoleon. With STN he has played hundreds of shows across several states to audiences ranging from intimate private shows to large outdoor festivals.</p>
-            <p>He currenty works as a photo editor and graphic designer for a local photo. Doing so has allowed Jeff to grow as a graphic designer by building custom yearbooks and senior composites for several Louisville area schools.</p>
+            <p>He currenty works as a photo editor and graphic designer for a local photography studio. Doing so has allowed Jeff to grow as a graphic designer by building custom yearbooks and senior composites for several Louisville area schools.</p>
             <p>During the past two to three years, Jeff has had an increased interest in graphic design and coding. This eventually led to an enrollment in Code Louisville in their Front-End Web Development and Python courses. Since graduating, Jeff has continued to self learn new languages and libraries in an attempt to stay current with the day's tech.</p>
           </div>
         </div>
@@ -70,6 +74,7 @@ const About = () => {
         </div>
       </div>
 
+    </div>
     </div>
   );
 };
