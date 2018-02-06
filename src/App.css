@@ -46,7 +46,7 @@ a {
     padding-bottom: 2em; }
 
 .box {
-  background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+  background: linear-gradient(to bottom, #0a1899, #3fb9ff);
   border-radius: 3px;
   box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
   color: white; }
@@ -83,6 +83,25 @@ a {
     letter-spacing: 20px;
     top: 50%;
     right: 50%; }
+
+.beetle-pos {
+  margin: 0 auto;
+  position: relative; }
+  .beetle-pos svg {
+    width: 50%;
+    display: block;
+    margin: 0 auto; }
+  .beetle-pos h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%, 50%); }
 
 /********************** HEADER SECTION **********************/
 .header {
@@ -167,15 +186,12 @@ a {
   padding: 1em .5em; }
   .home h1 {
     font-weight: 700; }
+  .home svg {
+    width: 100%; }
+    .home svg * {
+      fill: red; }
 
 /********************** PORTFOLIO SECTION **********************/
-.portfolio .main-header {
-  background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
-  padding: 5em 0; }
-  .portfolio .main-header h1 {
-    padding: 0;
-    color: white; }
-
 .portfolio .links {
   border-top: none; }
   .portfolio .links a {
@@ -185,7 +201,6 @@ a {
 .web {
   padding: 1em .5em; }
   .web .info {
-    background: white;
     padding: 0 .5em; }
 
 .portfolio .web .portfolio-images img {
@@ -326,7 +341,7 @@ a {
       list-style: square outside none;
       padding-bottom: 1em; }
   .about .languages-programs {
-    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -354,8 +369,10 @@ a {
 /********************** CONTACT SECTION **********************/
 .contact {
   padding: 1em .5em; }
+  .contact .beetle-pos svg {
+    width: 100%; }
   .contact form {
-    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -380,7 +397,7 @@ a {
         outline: none;
         border-bottom: 2px solid #ffbb00; }
     .contact form #submit {
-      background: linear-gradient(to left, #4d0a99, #3a017a);
+      background: linear-gradient(to left, #0a1899, #3a017a);
       width: 75%;
       display: block;
       margin: 0 auto;
@@ -392,7 +409,7 @@ a {
   .contact fieldset {
     border: none; }
   .contact .contact-links {
-    background: linear-gradient(to bottom, #4d0a99, #3fb9ff);
+    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -427,7 +444,7 @@ a {
     .social-media svg .icon-circle {
       fill: #3f6cff; }
     .social-media svg .icon-shadow {
-      fill: #4d0a99; }
+      fill: #0a1899; }
     .social-media svg .icon-face {
       fill: #3fb9ff; }
 

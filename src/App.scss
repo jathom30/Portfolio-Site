@@ -1,5 +1,5 @@
 $blue: rgb(63,185,255);
-$purple: rgb(77,10,153);
+$purple: rgb(10, 24, 153);
 $green: rgb(3, 255, 171);
 $blue-green: linear-gradient(to top, $blue, $green);
 $blue-and-purple: rgb(63, 108, 255);
@@ -53,11 +53,7 @@ a {
 }
 
 .main {
-  // min-height: 75vh;
-  // background: linear-gradient(to bottom, rgba(200, 230, 247, 0), rgba(200, 230, 247, 0.25), rgba(200,230,246,0));
-  // background: linear-gradient(to bottom, rgba(63, 185, 255,1), rgb(3, 255, 171),  rgba(63, 185, 255,1));
   padding-bottom: 2em;
-  // color: white;
   h1 {
     padding: 1em 0;
     margin: 0 1em;
@@ -128,6 +124,31 @@ a {
     top: 50%;
     right: 50%;
     // transform: translate(50%,50%);
+  }
+}
+
+.beetle-pos {
+  margin: 0 auto;
+  position: relative;
+  svg {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+  #beetle-wings {
+    // fill: orange; 
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
   }
 }
 
@@ -238,18 +259,16 @@ a {
   h1 {
     font-weight: 700;
   }
+  svg {
+    width: 100%;
+    * {
+      fill: red;
+    }
+  }
 }
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio {
-  .main-header {
-    background: $purple-blue;
-    padding: 5em 0;
-    h1 {
-      padding: 0;
-      color: white;
-    }
-  }
   .links {
     border-top: none;
     a {
@@ -264,7 +283,7 @@ a {
   padding: 1em .5em;
   // background: white;
   .info {
-    background: white;
+    // background: white;
     padding: 0 .5em;
   }
 }
@@ -492,6 +511,11 @@ a {
 /********************** CONTACT SECTION **********************/
 .contact {
   padding: 1em .5em;
+  .beetle-pos {
+    svg {
+      width: 100%;
+    }
+  }
   form {
     @include show-box();
     padding: 0 0 1em;

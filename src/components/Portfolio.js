@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 
-import Spacer from './Spacer';
+// import Spacer from './Spacer';
 import Web from './portfolio/Web';
 import Visual from './portfolio/Visual';
 import Audio from './portfolio/Audio';
-import rocksPortfolio from '../assets/rocksPortfolio.jpg';
+
+import Beetle from '../assets/Beetle';
 
 export default class Portfolio extends Component {
   
   render() {
     return(
       <div className="portfolio main" id="portfolio">
-        <Spacer backgroundImage={rocksPortfolio} />
-        {/* <div className="main-header">
+        <div className="beetle-pos">
           <h1>Portfolio</h1>
-        </div> */}
+          <Beetle />
+        </div>
+        
         <Web />
         <Visual />
         <Audio />

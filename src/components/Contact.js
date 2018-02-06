@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 
-import Spacer from './Spacer';
+// import Spacer from './Spacer';
 import ContactForm from './ContactForm';
+import BeetleWing from '../assets/BeetleWing';
 
-import rocksContact from '../assets/rocksContact.jpg';
+// import rocksContact from '../assets/rocksContact.jpg';
 
 export default class Contact extends Component {
   render() {
     return (
       <div className="contact main" id="contact">
-        <Spacer backgroundImage={rocksContact} />
-        {/* <h1>Contact</h1> */}
+        <div className="beetle-pos">
+          <h1>Contact</h1> 
+          <BeetleWing />  
+        </div>
         <ContactForm />
           
         <div className="contact-links">

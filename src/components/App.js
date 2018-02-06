@@ -6,16 +6,7 @@ import Portfolio from './Portfolio';
 import About from './About';
 import Contact from './Contact';
 import SocialMedia from './SocialMedia';
-import Background from '../assets/rocksBW.jpg';
 
-const backgroundStyle = {
-  background: 'url(' +Background + ') white',
-  backgroundOrigin: 'center',
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-
-}
 // import NotFound from './NotFound';
 
 export default class App extends Component {
@@ -24,7 +15,7 @@ export default class App extends Component {
     return (
       <div className="App">
 
-          <div className="background" style={ backgroundStyle }></div>
+          {/* <div className="background" style={ backgroundStyle }></div> */}
         
           <Header />
           <Home />
