@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TimelineMax, Power1 } from 'gsap';
 
 import JeffThomasLogo from '../assets/JeffThomasLogo';
 
@@ -26,16 +27,29 @@ export default class Header extends Component {
 
   }
 
+  componentDidMount() {
+    const opening = new TimelineMax(),
+          header = document.getElementById('header'),
+          logo = document.getElementById('logo'),
+          hamburger = document.getElementById('hamburger');
+
+    opening
+    .from(header, 2, {y: '-100%', autoAlpha: 0, ease: Power1.easeOut})
+    .from(logo, 1, {autoAlpha: 0, ease: Power1.easeInOut}, 1)
+    .from(hamburger, 1, {autoAlpha: 0, ease: Power1.easeInOut}, 1);
+  }
+
+
   render () {
 
     const { nav } = this.state;
 
     return (
-      <div className={nav ? "header full" : "header"}>
+      <div id="header" className={nav ? "header full" : "header"}>
     
         <div>
-          <a href="#home" onClick={this.handleClick} ><JeffThomasLogo /></a>
-          <div className="bun" onClick={this.showNav}>
+          <a id="logo" href="#home" onClick={this.handleClick} ><JeffThomasLogo /></a>
+          <div id="hamburger" className="bun" onClick={this.showNav}>
             <div className={ nav ? 'hamburger exposed' : 'hamburger'}></div>
           </div>
         </div>

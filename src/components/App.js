@@ -10,13 +10,10 @@ import SocialMedia from './SocialMedia';
 // import NotFound from './NotFound';
 
 export default class App extends Component {
-  
   render() {
     return (
       <div className="App">
 
-          {/* <div className="background" style={ backgroundStyle }></div> */}
-        
           <Header />
           <Home />
           <Portfolio />
@@ -24,9 +21,6 @@ export default class App extends Component {
           <Contact />
           <SocialMedia />
           
-        
-
-
         <div className="footer">© Jeff Thomas 2017</div>
       </div>
     );

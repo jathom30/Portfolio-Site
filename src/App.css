@@ -29,12 +29,10 @@ a {
   padding: 0;
   margin: 0; }
 
-.main {
-  padding-bottom: 2em; }
-  .main h1 {
-    padding: 1em 0;
-    margin: 0 1em;
-    letter-spacing: 5px; }
+.main h1 {
+  padding: 1em 0;
+  margin: 0 1em;
+  letter-spacing: 5px; }
 
 .info {
   width: 80vw;
@@ -46,7 +44,6 @@ a {
     padding-bottom: 2em; }
 
 .box {
-  background: linear-gradient(to bottom, #0a1899, #3fb9ff);
   border-radius: 3px;
   box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
   color: white; }
@@ -68,6 +65,12 @@ a {
       background: rgba(255, 255, 255, 0.15); }
     .links a.active {
       background: rgba(255, 255, 255, 0); }
+
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
 
 /********************** SPACER SECTIONS **********************/
 .spacer {
@@ -91,6 +94,10 @@ a {
     width: 50%;
     display: block;
     margin: 0 auto; }
+    .beetle-pos svg circle {
+      fill: #1e2775; }
+    .beetle-pos svg path {
+      fill: #3e4fee; }
   .beetle-pos h1 {
     margin: 0;
     padding: 0;
@@ -183,19 +190,31 @@ a {
 /********************** HOME SECTION **********************/
 .home {
   min-height: 100vh;
-  padding: 1em .5em; }
+  padding: 1em 0; }
   .home h1 {
     font-weight: 700; }
-  .home svg {
-    width: 100%; }
-    .home svg * {
-      fill: red; }
+  .home .beetle-main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .home .beetle-main svg {
+      width: 100vw; }
+      .home .beetle-main svg * {
+        fill: #3e4fee; }
 
 /********************** PORTFOLIO SECTION **********************/
-.portfolio .links {
-  border-top: none; }
-  .portfolio .links a {
-    width: 50%; }
+.portfolio {
+  padding-top: 50px;
+  background: linear-gradient(to bottom, #f5f6f7, white); }
+  .portfolio .links {
+    border-top: none; }
+    .portfolio .links a {
+      width: 50%; }
 
 /****** WEB ******/
 .web {
@@ -213,7 +232,8 @@ a {
 
 /****** IMAGES ******/
 .visual {
-  padding: 1em .5em; }
+  padding: 1em .5em;
+  background: linear-gradient(to bottom, #f5f6f7, white); }
 
 .portfolio-images {
   padding: 1em 0;
@@ -272,13 +292,12 @@ a {
 .left:hover, .center:hover, .right:hover {
   filter: brightness(1.15); }
 
-.portfolio .visual {
-  margin-bottom: 5em; }
-
 /****** AUDIO ******/
 .audio {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-bottom: 2em;
+  background: linear-gradient(to bottom, #f5f6f7, white); }
   .audio .info {
     padding: 1em .5em; }
   .audio .gretsch {
@@ -292,9 +311,12 @@ a {
     padding: 0 .5em; }
 
 /********************** ABOUT SECTION **********************/
+#about {
+  padding-top: 50px;
+  background: linear-gradient(to bottom, #f5f6f7, white); }
+
 .about {
-  margin: 1em .5em;
-  background: rgba(255, 255, 255, 0.75); }
+  padding: 2em 0; }
   .about .bio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -341,7 +363,6 @@ a {
       list-style: square outside none;
       padding-bottom: 1em; }
   .about .languages-programs {
-    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -368,11 +389,11 @@ a {
 
 /********************** CONTACT SECTION **********************/
 .contact {
-  padding: 1em .5em; }
+  padding: 1em .5em;
+  background: linear-gradient(to bottom, #f5f6f7, white); }
   .contact .beetle-pos svg {
     width: 100%; }
   .contact form {
-    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -397,7 +418,7 @@ a {
         outline: none;
         border-bottom: 2px solid #ffbb00; }
     .contact form #submit {
-      background: linear-gradient(to left, #0a1899, #3a017a);
+      background: linear-gradient(to left, #1e2775, #3a017a);
       width: 75%;
       display: block;
       margin: 0 auto;
@@ -409,7 +430,6 @@ a {
   .contact fieldset {
     border: none; }
   .contact .contact-links {
-    background: linear-gradient(to bottom, #0a1899, #3fb9ff);
     border-radius: 3px;
     box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
     color: white;
@@ -442,11 +462,11 @@ a {
     .social-media svg:hover {
       transform: scale(1.2); }
     .social-media svg .icon-circle {
-      fill: #3f6cff; }
+      fill: #1e2775; }
     .social-media svg .icon-shadow {
-      fill: #0a1899; }
+      fill: #1e2775; }
     .social-media svg .icon-face {
-      fill: #3fb9ff; }
+      fill: #3e4fee; }
 
 /********************** FOOTER SECTION **********************/
 .footer {

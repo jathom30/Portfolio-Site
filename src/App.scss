@@ -1,13 +1,10 @@
-$blue: rgb(63,185,255);
-$purple: rgb(10, 24, 153);
-$green: rgb(3, 255, 171);
-$blue-green: linear-gradient(to top, $blue, $green);
-$blue-and-purple: rgb(63, 108, 255);
-$blue-purple: linear-gradient(to top, $purple, $blue);
-$purple-blue: linear-gradient(to bottom, $purple, $blue);
+$primary: rgb(62, 79, 238);
+$secondary: rgb(30, 39, 117);
+$primary-variant: rgb(62, 133, 240);
+$primary-secondary: linear-gradient(to top, $secondary, $primary);
+$secondary-blue: linear-gradient(to bottom, $secondary, $primary);
 
 @mixin show-box {
-  background: $purple-blue;
   border-radius: 3px;
   box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, .5);
   color: white;
@@ -53,7 +50,6 @@ a {
 }
 
 .main {
-  padding-bottom: 2em;
   h1 {
     padding: 1em 0;
     margin: 0 1em;
@@ -105,6 +101,13 @@ a {
   }
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
 
 /********************** SPACER SECTIONS **********************/
 .spacer {
@@ -134,9 +137,12 @@ a {
     width: 50%;
     display: block;
     margin: 0 auto;
-  }
-  #beetle-wings {
-    // fill: orange; 
+    circle {
+      fill: $secondary;
+    }
+    path {
+      fill: $primary;
+    }
   }
   h1 {
     margin: 0;
@@ -255,33 +261,48 @@ a {
 /********************** HOME SECTION **********************/
 .home {
   min-height: 100vh;
-  padding: 1em .5em;
+  padding: 1em 0;
   h1 {
     font-weight: 700;
   }
-  svg {
-    width: 100%;
-    * {
-      fill: red;
+  .beetle-main {
+    width: 100vw;
+    height: 100vh;
+    // overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 100vw;
+      * {
+        fill: $primary;
+      }
     }
   }
 }
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio {
+  padding-top: 50px;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
   .links {
     border-top: none;
     a {
       width: 50%;
     }
   }
+
 }
 
 /****** WEB ******/
 .web {
-  // margin-top: -3em;
+  // margin: 0 1em;
   padding: 1em .5em;
-  // background: white;
+  // background: linear-gradient(to bottom, rgb(245, 246, 247), white);
   .info {
     // background: white;
     padding: 0 .5em;
@@ -301,9 +322,10 @@ a {
 /****** IMAGES ******/
 .visual {
   padding: 1em .5em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
 }
 .portfolio-images {
-  // background: $purple-blue;
+  // background: $secondary-blue;
   padding: 1em 0;
   box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, .25) inset;
   min-height: 25vh;
@@ -379,14 +401,13 @@ a {
   filter: brightness(1.15);
 }
 
-.portfolio .visual {
-  margin-bottom: 5em;
-}
 
 /****** AUDIO ******/
 .audio {
   position: relative;
   overflow: hidden;
+  padding-bottom: 2em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
   .info {
     padding: 1em .5em;
   }
@@ -397,7 +418,6 @@ a {
     bottom: 0;
     right: 0;
     transform: translateX(50%);
-    // z-index: -1;
   }
   .iframes {
     padding: 0 .5em;
@@ -406,9 +426,12 @@ a {
 }
 
 /********************** ABOUT SECTION **********************/
+#about {
+  padding-top: 50px;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+}
 .about {
-  margin: 1em .5em;
-  background: rgba(255, 255, 255, 0.75);
+  padding: 2em 0;
   .bio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -511,6 +534,7 @@ a {
 /********************** CONTACT SECTION **********************/
 .contact {
   padding: 1em .5em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
   .beetle-pos {
     svg {
       width: 100%;
@@ -541,10 +565,9 @@ a {
         outline: none;
         border-bottom: 2px solid rgb(255, 187, 0);
       }
-      
     }
     #submit {
-      background: linear-gradient(to left, $purple, rgb(58, 1, 122));
+      background: linear-gradient(to left, $secondary, rgb(58, 1, 122));
       width: 75%;
       display: block;
       margin: 0 auto;
@@ -600,13 +623,13 @@ a {
       transform: scale(1.2);
     }
     .icon-circle {
-      fill: $blue-and-purple;
+      fill: $secondary;
     }
     .icon-shadow {
-      fill: $purple;
+      fill: $secondary;
     }
     .icon-face {
-      fill: $blue;
+      fill: $primary;
     }    
   }
 }

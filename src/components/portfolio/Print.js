@@ -61,7 +61,6 @@ export default class Print extends Component {
         </div>
 
         <div style={ imageClicked ? {display: 'block'} : {display: 'none'} }>
-          {/* <Image data={this.data} /> */}
           <img 
             className='full-image'
             onClick={this.hideImage} 
