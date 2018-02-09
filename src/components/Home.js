@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TimelineMax, Elastic, Power1, Sine } from 'gsap';
 
-import Beetle from './Beetle';
+import BeetlePieces from '../assets/BeetlePieces';
 
 export default class Home extends Component {
 
@@ -23,11 +23,13 @@ export default class Home extends Component {
       .to("#left-rear-leg", .5, {rotation: '30', transformOrigin: 'right 35px', ease:Sine.easeInOut, repeat:2, yoyo:true}, '.4')
       
       .to("#right-front-leg", .5, {rotation: '20', transformOrigin: 'left bottom', ease:Sine.easeInOut, repeat:2, yoyo:true}, '.1')
-      .from("#right-mid-leg", .5, {rotation: '20', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:2, yoyo:true}, '.2')
+      .from("#right-mid-leg", .5, {rotation: '20', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:2, yoyo:true}, '.4')
       .from("#right-rear-leg", .5, {rotation: '-30', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:1, yoyo:true}, '.5')
       //shell opens for wings
       .to("#left-shell", 2, {rotation:'0', transformOrigin:'right', ease: Elastic.easeOut.config(2, .75), repeat:0}, '1.5')
       .to("#right-shell", 2, {rotation:'0', transformOrigin:'left', ease: Elastic.easeOut.config(2, .75), repeat:0}, '1.5')
+      .to('#left-antenna', 2, {rotation: '20', transformOrigin:'right', ease: Power1.easeInOut, repeat: 2, yoyo: true}, '1.5')
+      .to('#right-antenna', 2, {rotation: '-20', transformOrigin:'left', ease: Power1.easeInOut, repeat: 2, yoyo: true}, '1.5')
       //wings show
       .fromTo("#left-wing", 3, {rotation: '-40', transformOrigin:'right bottom', autoAlpha: 0}, {rotation: '0', autoAlpha: .75, ease: Elastic.easeOut.config(1, .5)}, 'wings-show')
       .fromTo("#right-wing", 3, {rotation: '40', transformOrigin:'left bottom', autoAlpha: 0}, {rotation: '0', autoAlpha: .75, ease: Elastic.easeOut.config(1, .5)}, 'wings-show')
@@ -58,7 +60,9 @@ export default class Home extends Component {
       <div className="home main" id="home">
         <h1>Welcome</h1>
         <p>put things here</p>
-        <Beetle />
+        <div className="beetle-main">
+          <BeetlePieces />
+        </div>
       </div>
     );
   }

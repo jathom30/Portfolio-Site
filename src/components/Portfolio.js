@@ -4,18 +4,16 @@ import React, { Component } from 'react';
 import Web from './portfolio/Web';
 import Visual from './portfolio/Visual';
 import Audio from './portfolio/Audio';
+import Beetle from './Beetle';
 
-import Beetle from '../assets/Beetle';
 
 export default class Portfolio extends Component {
   
   render() {
     return(
       <div className="portfolio main" id="portfolio">
-        <div className="beetle-pos">
-          <h1>Portfolio</h1>
-          <Beetle />
-        </div>
+
+          <Beetle title="Portfolio" />
         
         <Web />
         <Visual />

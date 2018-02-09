@@ -1,7 +1,7 @@
 import React from 'react';
 // import Spacer from './Spacer';
 
-import BeetleShell from '../assets/BeetleShell';
+import Beetle from './Beetle';
 import jeffThomas from '../assets/jeffThomas.jpg';
 
 const headshotBackground = {
@@ -16,10 +16,7 @@ const headshotBackground = {
 const About = () => {
   return (
     <div id="about">
-      <div className="beetle-pos">
-        <h1>About</h1>
-        <BeetleShell />
-      </div>
+      <Beetle title="About" />
       <div className="about main" >
 
         <div className="info">

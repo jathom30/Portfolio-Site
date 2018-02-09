@@ -101,13 +101,41 @@ a {
   }
 }
 
-.show {
-  display: block;
+.section-h1 {
+  position: relative;
+  h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    z-index: 1;
+  }
+  .beetle-pos {
+    background: $secondary;
+    margin: 0 auto;
+    position: relative;
+    clip-path: circle(25vw at 50% 50%);
+    svg {
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+  
+      circle {
+        fill: $secondary;
+      }
+      path {
+        fill: $primary;
+      }
+    }
+  }
 }
 
-.hide {
-  display: none;
-}
 
 /********************** SPACER SECTIONS **********************/
 .spacer {
@@ -130,33 +158,6 @@ a {
   }
 }
 
-.beetle-pos {
-  margin: 0 auto;
-  position: relative;
-  svg {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    circle {
-      fill: $secondary;
-    }
-    path {
-      fill: $primary;
-    }
-  }
-  h1 {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
-    position: absolute;
-    right: 50%;
-    bottom: 50%;
-    transform: translate(50%,50%);
-  }
-}
 
 
 /********************** HEADER SECTION **********************/
@@ -268,8 +269,8 @@ a {
   .beetle-main {
     width: 100vw;
     height: 100vh;
-    // overflow: hidden;
-    position: fixed;
+    overflow: hidden;
+    // position: fixed;
     top: 0;
     left: 0;
     // background: pink;
@@ -535,11 +536,6 @@ a {
 .contact {
   padding: 1em .5em;
   background: linear-gradient(to bottom, rgb(245, 246, 247), white);
-  .beetle-pos {
-    svg {
-      width: 100%;
-    }
-  }
   form {
     @include show-box();
     padding: 0 0 1em;

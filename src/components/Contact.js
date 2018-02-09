@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // import Spacer from './Spacer';
 import ContactForm from './ContactForm';
-import BeetleWing from '../assets/BeetleWing';
+import Beetle from './Beetle';
 
 // import rocksContact from '../assets/rocksContact.jpg';
 
@@ -10,10 +10,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="contact main" id="contact">
-        <div className="beetle-pos">
-          <h1>Contact</h1> 
-          <BeetleWing />  
-        </div>
+        <Beetle title="Contact" />
         <ContactForm />
           
         <div className="contact-links">
