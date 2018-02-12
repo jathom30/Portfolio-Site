@@ -103,6 +103,11 @@ a {
 
 .section-h1 {
   position: relative;
+  .beetle {
+    &.myClass {
+      background: pink;
+    }
+  }
   h1 {
     margin: 0;
     padding: 0;

@@ -68,6 +68,8 @@ a {
 
 .section-h1 {
   position: relative; }
+  .section-h1 .beetle.myClass {
+    background: pink; }
   .section-h1 h1 {
     margin: 0;
     padding: 0;

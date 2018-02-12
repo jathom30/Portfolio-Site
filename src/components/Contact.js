@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
-// import Spacer from './Spacer';
 import ContactForm from './ContactForm';
 import Beetle from './Beetle';
-
-// import rocksContact from '../assets/rocksContact.jpg';
 
 export default class Contact extends Component {
   render() {
