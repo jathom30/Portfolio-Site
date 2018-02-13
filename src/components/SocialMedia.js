@@ -8,7 +8,7 @@ import YoutubeIcon from '../assets/YoutubeIcon';
 const SocialMedia = () => {
   return (
     <div className="social-media">
-      <h3>Find Me, Follow Me</h3>
+      {/* <h3>Find Me, Follow Me</h3> */}
       <div>
         <a href="http://twitter.com/jeffathomas"><TwitterIcon /></a>
         <a href="http://github.com/jathom30"><GitIcon /></a>

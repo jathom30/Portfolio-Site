@@ -45,7 +45,7 @@ export default class About extends Component {
               </ul>
             </div>
           </div>
-  
+          
           <div className="languages-programs">
             <div className="languages">
               <h2>Languages</h2>
@@ -63,7 +63,7 @@ export default class About extends Component {
                 <p>Logic Pro</p>
             </div>
           </div>
-  
+          
           <div className="info">
             <div className="availability">
               <h2>Availability</h2>

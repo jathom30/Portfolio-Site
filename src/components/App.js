@@ -5,7 +5,7 @@ import Home from './Home';
 import Portfolio from './Portfolio';
 import About from './About';
 import Contact from './Contact';
-import SocialMedia from './SocialMedia';
+// import SocialMedia from './SocialMedia';
 
 // import NotFound from './NotFound';
 
@@ -19,7 +19,7 @@ export default class App extends Component {
           <Portfolio />
           <About />
           <Contact />
-          <SocialMedia />
+          {/* <SocialMedia /> */}
           
         <div className="footer">© Jeff Thomas 2017</div>
       </div>

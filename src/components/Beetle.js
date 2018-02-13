@@ -7,66 +7,92 @@ export default class Beetle extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animate: false,
+      runaway: false,
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  walkingMotion() {
-    const animation = new TimelineMax();
-    animation
-      //shell closes as in just landed
-      .fromTo("#random-left-shell", .75, {rotation:'-10', transformOrigin:'right', ease:Sine.easeInOut}, {rotation: '-20', ease:Sine.easeInOut, repeat: 11, yoyo: true}, '0')
-      .fromTo("#random-right-shell", .75, {rotation:'10', transformOrigin:'left', ease:Sine.easeInOut}, {rotation: '20', ease:Sine.easeInOut, repeat: 11, yoyo: true},'.1')
-      //legs walk
-      .to("#random-left-front-leg", .5, {rotation: '-20', transformOrigin: '75px bottom', ease:Sine.easeInOut, repeat:18, yoyo:true}, '0')
-      .to("#random-left-mid-leg", .5, {rotation: '-20', transformOrigin: 'right 35px', ease:Sine.easeInOut, repeat:18, yoyo:true}, '.2')
-      .to("#random-left-rear-leg", .5, {rotation: '30', transformOrigin: 'right 35px', ease:Sine.easeInOut, repeat:17, yoyo:true}, '.4')
-      
-      .to("#random-right-front-leg", .5, {rotation: '20', transformOrigin: 'left bottom', ease:Sine.easeInOut, repeat:18, yoyo:true}, '.2')
-      .to("#random-right-mid-leg", .5, {rotation: '20', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:17, yoyo:true}, '.4')
-      .to("#random-right-rear-leg", .5, {rotation: '-30', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:17, yoyo:true}, '.6')
+  handleClick(e) {
+    this.setState({
+      runaway: true,
+    });
+    //after animation runs, flip to false
+    setTimeout(function(){
+      this.setState({
+        runaway: false,
+      });
+    }.bind(this), 7000);
   }
-
+  getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
   antennaMotion() {
     const animation = new TimelineMax({repeat:-1});
   
     animation
-    //set shell
-    .set('#random-left-shell', {rotation:'-20', transformOrigin:'right'})
-    .set('#random-right-shell', {rotation:'20', transformOrigin:'left'})
+    //set legs
+    .set('#random-left-mid-leg', {rotation:'15', transformOrigin:'right'})
+    .set('#random-right-mid-leg', {rotation:'-15', transformOrigin:'left'})
+    .set('#random-left-rear-leg', {rotation:'20', transformOrigin:'right'})
+    .set('#random-right-rear-leg', {rotation:'-20', transformOrigin:'left'})
     //antenna movements
     .to('#random-left-antenna', .1, {rotation: '10', transformOrigin:'right', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '.5')
     .to('#random-left-antenna', .1, {rotation: '10', transformOrigin:'right', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '5')
     .to('#random-left-antenna', .1, {rotation: '10', transformOrigin:'right', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '10.9')
+
     .to('#random-right-antenna', .1, {rotation: '-10', transformOrigin:'left', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '.4')
     .to('#random-right-antenna', .1, {rotation: '-10', transformOrigin:'left', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '5')  
     .to('#random-right-antenna', .1, {rotation: '-10', transformOrigin:'left', ease: Sine.easeInOut, repeat: 1, yoyo: true}, '11')
-    .repeatDelay(this.getRandomArbitrary(1,3));
+    //quick shell click
+    .fromTo('#random-left-shell', .1, {rotation: '-15', transformOrigin: 'right'}, {rotation: '-20', repeat: 1, yoyo: true}, '3')
+    .fromTo('#random-right-shell', .1, {rotation: '15', transformOrigin: 'left'}, {rotation: '20', repeat: 1, yoyo: true}, '3')
+    .fromTo('#random-left-shell', .15, {rotation: '-15', transformOrigin: 'right'}, {rotation: '-20', repeat: 1, yoyo: true}, '7.2')
+    .fromTo('#random-right-shell', .15, {rotation: '15', transformOrigin: 'left'}, {rotation: '20', repeat: 1, yoyo: true}, '7.2')
+    .repeatDelay(this.getRandomArbitrary(1,4));
   }
 
-  movingBeetle() {
+  runMotion() {
     const animation = new TimelineMax();
     animation
-      .set("#random-beetle", {rotation: '225', transformOrigin: 'center center', y: '-400px', x: '400px'})
-      .to("#random-beetle", 4, {y: '400px', x: '-400px'})
-      .set("#random-beetle", {rotation: '-45', y: '400px', x: '400px'})
-      .to("#random-beetle", 3.5, {y: '-400px', x: '-400px'})
-      .set("#random-beetle", {rotation: '0', y: '420', x: '0'})
-      .to("#random-beetle", 2, {y: '0', x: '0', ease: Sine.easeOut})
+    //legs walk
+    .to("#random-left-front-leg", .25, {rotation: '-30', transformOrigin: '75px bottom', ease:Sine.easeInOut, repeat:23, yoyo:true})
+    .to("#random-left-mid-leg", .25, {rotation: '-20', transformOrigin: 'right 35px', ease:Sine.easeInOut, repeat:23, yoyo:true}, '.1')
+    .to("#random-left-rear-leg", .25, {rotation: '40', transformOrigin: 'right top', ease:Sine.easeInOut, repeat:23, yoyo:true}, '.1')
+    
+    .to("#random-right-front-leg", .25, {rotation: '30', transformOrigin: 'left bottom', ease:Sine.easeInOut, repeat:23, yoyo:true}, '.2')
+    .to("#random-right-mid-leg", .25, {rotation: '20', transformOrigin: 'left 35px', ease:Sine.easeInOut, repeat:23, yoyo:true}, '.3')
+    .to("#random-right-rear-leg", .25, {rotation: '-40', transformOrigin: 'left top', ease:Sine.easeInOut, repeat:23, yoyo:true}, '.3');  
   }
 
-  getRandomArbitrary(min, max) {
-    return Math.random() * (max - min) + min;
+  moveBeetle() {
+    const animation = new TimelineMax();
+    animation
+    .to('#random-beetle', 1, {y:-400, ease: Sine.easeIn})
+    .set('#random-beetle', {x:400, y:400, rotation: -45, transformOrigin: 'center'})
+    .to('#random-beetle', 2, {x:-400,y:-400})
+    .set('#random-beetle', {x:400, y:-400, rotation: 225})
+    .to('#random-beetle', 2, {x:-400,y:400})
+    .set('#random-beetle', {x:0, y:400, rotation:0})
+    .to('#random-beetle', 1, {x:0, y:0, ease:Sine.easeOut})
   }
   
   componentDidMount() {
     this.antennaMotion();
   }
   
-  
   render() {
+    const {runaway} = this.state;
+    
+    if (runaway) {
+      console.log('run away');
+      //add moving animation if runaway is true(after click)
+      this.runMotion();
+      this.moveBeetle();
+      
+    }
+
     return (
-      <div className="section-h1">
+      <div className={runaway ? 'section-h1 no-click' : 'section-h1'} onClick={this.handleClick}>
         <h1>{ this.props.title }</h1>
         <div className="beetle-pos">
           <RandomBeetle />

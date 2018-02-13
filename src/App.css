@@ -44,9 +44,9 @@ a {
     padding-bottom: 2em; }
 
 .box {
+  background: linear-gradient(to bottom, rgba(30, 39, 117, 0.6), rgba(62, 79, 238, 0.25));
   border-radius: 3px;
-  box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
-  color: white; }
+  box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5); }
 
 .links {
   text-align: center;
@@ -56,7 +56,7 @@ a {
   justify-content: space-between; }
   .links a {
     text-transform: uppercase;
-    color: white;
+    color: black;
     padding: 1em .5em;
     width: 33%;
     cursor: pointer;
@@ -68,8 +68,8 @@ a {
 
 .section-h1 {
   position: relative; }
-  .section-h1 .beetle.myClass {
-    background: pink; }
+  .section-h1.no-click {
+    pointer-events: none; }
   .section-h1 h1 {
     margin: 0;
     padding: 0;
@@ -83,7 +83,7 @@ a {
     transform: translate(50%, 50%);
     z-index: 1; }
   .section-h1 .beetle-pos {
-    background: #1e2775;
+    background: radial-gradient(circle, #1e2775 5%, #3e4fee);
     margin: 0 auto;
     position: relative;
     clip-path: circle(25vw at 50% 50%); }
@@ -297,7 +297,7 @@ a {
 .audio {
   position: relative;
   overflow: hidden;
-  padding-bottom: 2em;
+  padding-bottom: 6em;
   background: linear-gradient(to bottom, #f5f6f7, white); }
   .audio .info {
     padding: 1em .5em; }
@@ -358,20 +358,21 @@ a {
       grid-column: span 3; }
   .about .info:last-of-type p {
     padding-top: 0; }
-  .about .education ul {
-    padding: 0; }
-    .about .education ul li {
-      list-style: square outside none;
-      padding-bottom: 1em; }
+  .about .education {
+    padding: 1em 0 2em; }
+    .about .education ul {
+      padding: 0; }
+      .about .education ul li {
+        list-style: square outside none;
+        padding-bottom: 1em; }
   .about .languages-programs {
-    border-radius: 3px;
-    box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
-    color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: 50% 50%;
     width: 80vw;
     margin: 0 auto;
-    padding: 1em; }
+    padding: 3em 1em; }
     .about .languages-programs h2 {
       padding: 0 0 .5em;
       margin-top: 0;
@@ -392,51 +393,12 @@ a {
 .contact {
   padding: 1em .5em;
   background: linear-gradient(to bottom, #f5f6f7, white); }
-  .contact form {
-    border-radius: 3px;
-    box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 0 0 1em;
-    margin-bottom: 4em; }
-    .contact form h4 {
-      text-transform: uppercase;
-      margin: 0;
-      padding: 1em 1em 0; }
-    .contact form p {
-      padding-left: 1em;
-      margin: 0;
-      margin-bottom: 1em; }
-    .contact form input, .contact form textarea {
-      width: 100%;
-      border: none;
-      padding: .5em 0;
-      border-bottom: 2px solid #10d9e7;
-      background: white;
-      text-align: center; }
-      .contact form input:focus, .contact form textarea:focus {
-        outline: none;
-        border-bottom: 2px solid #ffbb00; }
-    .contact form #submit {
-      background: linear-gradient(to left, #1e2775, #3a017a);
-      width: 75%;
-      display: block;
-      margin: 0 auto;
-      border-bottom: 2px solid #3a017a;
-      color: white; }
-      .contact form #submit:hover {
-        background: #3a017a;
-        cursor: pointer; }
-  .contact fieldset {
-    border: none; }
   .contact .contact-links {
-    border-radius: 3px;
-    box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, 0.5);
-    color: white;
-    min-width: auto;
+    background: pink;
+    padding: 2em 0;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    padding-bottom: 1em; }
+    grid-template-rows: auto; }
     .contact .contact-links h3 {
       grid-column: span 2;
       text-align: center;
@@ -448,9 +410,9 @@ a {
       text-align: right;
       padding-right: .5em; }
     .contact .contact-links a {
-      color: white; }
+      color: black; }
 
-/********************** SOCIAL MEDIA SECTION **********************/
+/********************** SOCIAL MEDIA ICONS **********************/
 .social-media {
   text-align: center; }
   .social-media svg {
@@ -470,5 +432,4 @@ a {
 /********************** FOOTER SECTION **********************/
 .footer {
   text-align: center;
-  padding: .5em;
-  color: white; }
+  padding: .5em; }

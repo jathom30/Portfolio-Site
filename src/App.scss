@@ -1,13 +1,17 @@
 $primary: rgb(62, 79, 238);
 $secondary: rgb(30, 39, 117);
 $primary-variant: rgb(62, 133, 240);
+$secondary-variant: rgb(11, 16, 70);
 $primary-secondary: linear-gradient(to top, $secondary, $primary);
 $secondary-blue: linear-gradient(to bottom, $secondary, $primary);
 
+
 @mixin show-box {
+  background: linear-gradient(to bottom, rgba($secondary, .6), rgba($primary, .25));
+  // border: solid rgba(0, 0, 0, .25) 2px;
   border-radius: 3px;
+  // color: white;
   box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, .5);
-  color: white;
 }
 
 
@@ -86,7 +90,7 @@ a {
   
   a {
     text-transform: uppercase;
-    color: white;
+    color: black;
     padding: 1em .5em;
     width: 33%;
     cursor: pointer;
@@ -103,10 +107,8 @@ a {
 
 .section-h1 {
   position: relative;
-  .beetle {
-    &.myClass {
-      background: pink;
-    }
+  &.no-click {
+    pointer-events: none;
   }
   h1 {
     margin: 0;
@@ -122,7 +124,7 @@ a {
     z-index: 1;
   }
   .beetle-pos {
-    background: $secondary;
+    background: radial-gradient(circle, $secondary 5%, $primary);
     margin: 0 auto;
     position: relative;
     clip-path: circle(25vw at 50% 50%);
@@ -412,7 +414,7 @@ a {
 .audio {
   position: relative;
   overflow: hidden;
-  padding-bottom: 2em;
+  padding-bottom: 6em;
   background: linear-gradient(to bottom, rgb(245, 246, 247), white);
   .info {
     padding: 1em .5em;
@@ -492,6 +494,7 @@ a {
     }
   }
   .education {
+    padding: 1em 0 2em;
     ul {
       padding: 0;
       li {
@@ -502,12 +505,13 @@ a {
     
   }
   .languages-programs {
-    @include show-box();
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
     display: grid;
     grid-template-columns: 50% 50%;
     width: 80vw;
     margin: 0 auto;
-    padding: 1em;
+    padding: 3em 1em;
     h2 {
       // background: white;
       padding: 0 0 .5em;
@@ -541,56 +545,54 @@ a {
 .contact {
   padding: 1em .5em;
   background: linear-gradient(to bottom, rgb(245, 246, 247), white);
-  form {
-    @include show-box();
-    padding: 0 0 1em;
-    margin-bottom: 4em;
-    h4 {
-      text-transform: uppercase;
-      margin: 0;
-      padding: 1em 1em 0;
-    }
-    p {
-      padding-left: 1em;
-      margin: 0;
-      margin-bottom: 1em;
-    }
-    input, textarea {
-      width: 100%;
-      border: none;
-      padding: .5em 0;
-      border-bottom: 2px solid rgb(16, 217, 231);
-      background: white;
-      text-align: center;
-      &:focus {
-        outline: none;
-        border-bottom: 2px solid rgb(255, 187, 0);
-      }
-    }
-    #submit {
-      background: linear-gradient(to left, $secondary, rgb(58, 1, 122));
-      width: 75%;
-      display: block;
-      margin: 0 auto;
-      border-bottom: 2px solid rgb(58, 1, 122);
-      color: white;
-      &:hover {
-        background: rgb(58, 1, 122);
-        cursor: pointer;
-      }
-    }
-  }
-  fieldset {
-    border: none;
-  }
+  // form {
+  //   background: rgba($primary, .25);
+  //   padding: 0 0 1em;
+  //   margin-bottom: 4em;
+  //   h4 {
+  //     text-transform: uppercase;
+  //     margin: 0;
+  //     padding: 1em 1em 0;
+  //   }
+  //   p {
+  //     padding-left: 1em;
+  //     margin: 0;
+  //     margin-bottom: 1em;
+  //   }
+  //   input, textarea {
+  //     width: 100%;
+  //     border: none;
+  //     padding: .5em 0;
+  //     border-bottom: 2px solid rgb(16, 217, 231);
+  //     background: white;
+  //     text-align: center;
+  //     &:focus {
+  //       outline: none;
+  //       border-bottom: 2px solid rgb(255, 187, 0);
+  //     }
+  //   }
+  //   #submit {
+  //     background: linear-gradient(to left, $secondary, rgb(58, 1, 122));
+  //     width: 75%;
+  //     display: block;
+  //     margin: 0 auto;
+  //     border-bottom: 2px solid rgb(58, 1, 122);
+  //     color: white;
+  //     &:hover {
+  //       background: rgb(58, 1, 122);
+  //       cursor: pointer;
+  //     }
+  //   }
+  // }
+  // fieldset {
+  //   border: none;
+  // }
   .contact-links {
-    @include show-box();
-    min-width: auto;
-    // background: pink;
+    background: pink;
+    padding: 2em 0;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    padding-bottom: 1em;
     h3 {
       grid-column: span 2;
       text-align: center;
@@ -606,12 +608,12 @@ a {
       padding-right: .5em;
     }
     a {
-      color: white;
+      color: black;
     }
   }
 }
 
-/********************** SOCIAL MEDIA SECTION **********************/
+/********************** SOCIAL MEDIA ICONS **********************/
 
 .social-media {
   text-align: center;
@@ -641,5 +643,5 @@ a {
 .footer {
   text-align: center;
   padding: .5em;
-  color: white;
+  // color: white;
 }
