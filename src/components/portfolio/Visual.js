@@ -4,33 +4,27 @@ import Print from './Print';
 import Digital from './Digital';
 
 export default class Visual extends Component {
-  constructor(props) {
-    super(props);
-    this.changeSection = this.changeSection.bind(this);
-    this.state = {
-      page: <Print />,
-      hasClass: true,
-    }
-  }
-
-  changeSection(e) {
-    if (e.target.id === 'print') {
-      this.setState({
-        page: <Print />,
-        hasClass: true,
-      });
-      console.log(this.page);
-    } else if (e.target.id === 'digital') {
-      this.setState({
-        page: <Digital />,
-        hasClass: false,
-      });
-    }
-  }
-
 
   render() {
-    const { page, hasClass } = this.state;
+    const { hasVisualClass, changeVisualImages } = this.props;
+    // PRINT Props
+    const { imageClicked, printData, digitalData, showImage, hideImage } = this.props;
+    
+    // change visual page between print and digital
+    let visualPage = null;
+    if (hasVisualClass) {
+      visualPage =<Print 
+                    imageClicked={imageClicked}
+                    printData={printData}
+                    showImage={showImage}
+                    hideImage={hideImage} />
+    } else {
+      visualPage =<Digital 
+                    imageClicked={imageClicked}
+                    digitalData={digitalData}
+                    showImage={showImage}
+                    hideImage={hideImage} />
+    }
 
     return (
       <div className='visual'>
@@ -42,12 +36,12 @@ export default class Visual extends Component {
 
         <div className="box">
           <div className="links">
-            <a onClick={this.changeSection} className={hasClass ? 'active' : ''} id="print">print</a>
-            <a onClick={this.changeSection} className={!hasClass ? 'active' : ''} id="digital">digital</a>
+            <a onClick={changeVisualImages} className={hasVisualClass ? 'active' : ''} id="print">print</a>
+            <a onClick={changeVisualImages} className={!hasVisualClass ? 'active' : ''} id="digital">digital</a>
           </div>
 
           <div>
-            {page}
+            { visualPage }
           </div>
         </div>
 

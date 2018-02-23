@@ -1,4 +1,4 @@
-export const STNData = {
+export const STNWebData = {
   title: 'Small Time Napoleon',
   altTitle: 'Small Time Napoleon Website',
   imgSrc: 'smallTimeNapoleonDuo.png',
@@ -19,6 +19,6 @@ export const SignatureData = {
   title: 'Signature Yearbook',
   altTitle: 'Signature Website',
   imgSrc: 'signatureDuo.png',
-  imgLink: 'jathom30.github.io/signature-yearbook-pricing-guide',
+  imgLink: 'jathom30.github.io/yearbook-pricing',
   id: 'web-3',
 };

@@ -1,34 +1,8 @@
 import React, { Component } from 'react';
 
-import { STNData, AngelData, SignatureData } from '../../data/webImages';
-
 export default class Web extends Component {
-  constructor(props) {
-    super(props);
-    this.changeImage = this.changeImage.bind(this);
-    this.state = {
-      data: STNData,
-    };
-  }
-
-  changeImage(e) {
-    if (e.target.id === 'stn') {
-      this.setState({
-        data: STNData,
-      });
-    } else if (e.target.id === 'angel') {
-      this.setState({
-        data: AngelData,
-      });
-    } else if (e.target.id === 'signature') {
-      this.setState({
-        data: SignatureData,
-      });
-    }
-  }
-
   render() {
-    const {data} = this.state;
+    const {webData, changeWebImage} = this.props;
 
     return (
       <div className="web">
@@ -40,13 +14,13 @@ export default class Web extends Component {
 
         <div className="box">
           <div className="links">
-            <a onClick={this.changeImage} className={data.id === 'web-1' ? 'active' : ''} id="stn">Small Time Napoleon</a>
-            <a onClick={this.changeImage} className={data.id === 'web-2' ? 'active' : ''} id="angel">The Angel Program</a>
-            <a onClick={this.changeImage} className={data.id === 'web-3' ? 'active' : ''} id="signature">Signature Yearbooks</a>
+            <a onClick={changeWebImage} className={webData.id === 'web-1' ? 'active' : ''} id="stn">Small Time Napoleon</a>
+            <a onClick={changeWebImage} className={webData.id === 'web-2' ? 'active' : ''} id="angel">The Angel Program</a>
+            <a onClick={changeWebImage} className={webData.id === 'web-3' ? 'active' : ''} id="signature">Signature Yearbooks</a>
           </div>
 
           <div className="portfolio-images">
-            <a href={`http://${data.imgLink}`}><img src={ `./images/${data.imgSrc}`} alt={data.altTitle}/></a>
+            <a href={`http://${webData.imgLink}`}><img src={ `./images/${webData.imgSrc}`} alt={webData.altTitle}/></a>
           </div>
         </div>
       </div>

@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 
 export default class RandomBeetle extends Component {
   render() {
+
+    
     return (
-      <svg id="beetle-random" className="beetle" xmlns="http://www.w3.org/2000/svg" width="709" height="205.42" viewBox="0 0 709 405.42">
+      <svg id="beetle-random" className="beetle" xmlns="http://www.w3.org/2000/svg" width="709" height="305.42" viewBox="0 0 709 405.42">
         <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
           <mask id="circle-mask">
             <circle fill="white" cx="354.5" cy="217.71" r="250"/>
           </mask>

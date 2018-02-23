@@ -9,10 +9,10 @@ export default class Beetle extends Component {
     this.state = {
       runaway: false,
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.runOnClick = this.runOnClick.bind(this);
   }
 
-  handleClick(e) {
+  runOnClick(e) {
     this.setState({
       runaway: true,
     });
@@ -23,6 +23,7 @@ export default class Beetle extends Component {
       });
     }.bind(this), 7000);
   }
+
   getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
   }
@@ -81,18 +82,18 @@ export default class Beetle extends Component {
   }
   
   render() {
-    const {runaway} = this.state;
+    const { runaway } = this.state;
     
+    //add moving animation if runaway is true(after click)
     if (runaway) {
-      console.log('run away');
-      //add moving animation if runaway is true(after click)
       this.runMotion();
       this.moveBeetle();
       
     }
 
     return (
-      <div className={runaway ? 'section-h1 no-click' : 'section-h1'} onClick={this.handleClick}>
+      //add no-click class while animation plays so it doesn't get altered
+      <div className={runaway ? 'section-h1 no-click' : 'section-h1'} onClick={this.runOnClick}>
         <h1>{ this.props.title }</h1>
         <div className="beetle-pos">
           <RandomBeetle />

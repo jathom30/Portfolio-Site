@@ -127,11 +127,14 @@ a {
     height: 100vh; }
   .header svg {
     width: auto;
-    height: 36px;
-    fill: white;
-    transition: .5s fill; }
-    .header svg:hover {
-      fill: orange; }
+    height: 36px; }
+    .header svg #beetle-icon-path {
+      fill: white; }
+      .header svg #beetle-icon-path:hover {
+        fill: orange;
+        transition: .5s fill; }
+    .header svg #beetle-icon-circle {
+      fill: none; }
   .header .bun {
     float: right;
     height: 6px;
@@ -394,11 +397,11 @@ a {
   padding: 1em .5em;
   background: linear-gradient(to bottom, #f5f6f7, white); }
   .contact .contact-links {
-    background: pink;
-    padding: 2em 0;
+    padding: 3em 0;
+    font-size: 1.25em;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto; }
+    grid-auto-rows: 75px; }
     .contact .contact-links h3 {
       grid-column: span 2;
       text-align: center;
@@ -406,11 +409,24 @@ a {
       margin-bottom: 0.5em; }
     .contact .contact-links p {
       margin: .25em; }
+    .contact .contact-links svg {
+      width: 50px;
+      height: auto;
+      display: inline-block;
+      justify-self: center;
+      align-self: center; }
+      .contact .contact-links svg .icon-circle {
+        fill: #1e2775; }
+      .contact .contact-links svg .icon-shadow {
+        fill: #1e2775; }
+      .contact .contact-links svg .icon-face {
+        fill: #3e4fee; }
     .contact .contact-links .right-text {
       text-align: right;
       padding-right: .5em; }
     .contact .contact-links a {
-      color: black; }
+      color: black;
+      align-self: center; }
 
 /********************** SOCIAL MEDIA ICONS **********************/
 .social-media {

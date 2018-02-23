@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 import SocialMedia from './SocialMedia';
 import Beetle from './Beetle';
+import PhoneIcon from '../assets/PhoneIcon';
+import MailIcon from '../assets/MailIcon';
+import TwitterIcon from '../assets/TwitterIcon';
 
 export default class Contact extends Component {
   render() {
@@ -10,12 +13,16 @@ export default class Contact extends Component {
         <Beetle title="Contact" />
 
         <div className="contact-links">
-          <p className="right-text">Email:</p>
+
+          <MailIcon />
           <a href="mailto:jathom30@gmail.com?Subject=Oh, hello"><p>jathom30@gmail.com</p></a>
-          <p className="right-text">Phone:</p>
+
+          <PhoneIcon />
           <a href="tel:+1-502-439-1974"><p>502-439-1974</p></a>
-          <p className="right-text">Twitter:</p>
-          <a href="http://twitter.com/jeffathomas"><p>@jeffathomas</p></a>
+
+          <TwitterIcon />
+          <a href="http://twitter.com/jeffathomas" rel="noopener noreferrer" target="_blank"><p>@jeffathomas</p></a>
+        
         </div>
         <SocialMedia />
       </div>

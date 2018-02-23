@@ -52,7 +52,7 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-    this.animateTheBeetle();
+    // this.animateTheBeetle();
   }
   
   render() {

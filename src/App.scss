@@ -128,6 +128,9 @@ a {
     margin: 0 auto;
     position: relative;
     clip-path: circle(25vw at 50% 50%);
+    #random-beetle {
+      // filter: url('#goo');
+    }
     svg {
       width: 75%;
       display: block;
@@ -184,13 +187,18 @@ a {
   }
 
   svg {
+    #beetle-icon-path {
+      fill: white;
+      &:hover {
+        fill: orange;
+        transition: .5s fill;
+      }
+    }
+    #beetle-icon-circle {
+      fill: none;
+    }
     width: auto;
     height: 36px;
-    fill: white;
-    transition: .5s fill;
-    &:hover {
-      fill: orange;
-    }
   }
   .bun {
     float: right;
@@ -588,11 +596,12 @@ a {
   //   border: none;
   // }
   .contact-links {
-    background: pink;
-    padding: 2em 0;
+    // background: pink;
+    padding: 3em 0;
+    font-size: 1.25em;
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto;
+    grid-auto-rows: 75px;
     h3 {
       grid-column: span 2;
       text-align: center;
@@ -602,6 +611,22 @@ a {
     p {
       margin: .25em;
     }
+    svg {
+      width: 50px;
+      height: auto;
+      display: inline-block;
+      justify-self: center;
+      align-self: center;
+      .icon-circle {
+        fill: $secondary;
+      }
+      .icon-shadow {
+        fill: $secondary;
+      }
+      .icon-face {
+        fill: $primary;
+      }  
+    }
     .right-text {
       // background: lightgoldenrodyellow;
       text-align: right;
@@ -609,6 +634,7 @@ a {
     }
     a {
       color: black;
+      align-self: center;
     }
   }
 }
