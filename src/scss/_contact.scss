@@ -1,0 +1,40 @@
+/********************** CONTACT SECTION **********************/
+.contact {
+  padding: 1em .5em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+  height: 100vh;
+  .contact-links {
+    padding: 3em 20px;
+    font-size: 1.25em;
+    .contact-group {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      a {
+        display: inline-block;
+        margin-left: 20px;
+        color: black;
+        align-self: center;
+        &:hover + svg {
+          transform: scale(1.2);
+        }
+      }
+      svg {
+        width: 50px;
+        height: auto;
+        display: inline-block;
+        align-self: center;
+        .icon-circle {
+          fill: $secondary;
+        }
+        .icon-shadow {
+          fill: $secondary;
+        }
+        .icon-face {
+          fill: $primary;
+        }  
+        transition: transform cubic-bezier(.62,-0.4,.49,1.01) .3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/********************** PORTFOLIO SECTION **********************/
+.portfolio {
+  padding-top: 50px;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+  .links {
+    border-top: none;
+    a {
+      width: 50%;
+    }
+  }
+
+}
+
+/****** WEB ******/
+.web {
+  // margin: 0 1em;
+  padding: 1em .5em;
+  // background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+  .info {
+    // background: white;
+    padding: 0 .5em;
+  }
+}
+.portfolio {
+  .web {
+    .portfolio-images {
+      display: block;
+      img {
+        width: 75vw;
+        box-shadow: none;
+        transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) .3s all;
+        &:hover {
+          filter: brightness(1.15);
+          transition: ease-out 0s all;
+        }
+      }
+    }
+  }
+}
+
+/****** IMAGES ******/
+.visual {
+  padding: 1em .5em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+}
+.portfolio-images {
+  // background: $secondary-blue;
+  padding: 1em 0;
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, .25) inset;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  text-align: center;
+  h2 {
+    border: none;
+  }
+
+  &.enhance {
+    display: block;
+    text-align: center;
+  }
+
+  .full-image {
+    width: 75vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    .left {
+      transform: rotate(0);
+      transition: .5s ease-out;
+    }
+    .center {
+      transform: translateY(0);
+      transition: .5s ease-in;
+    }
+    .right {
+      transform: rotate(0);
+      transition: .5s ease-out;
+    }
+  }
+
+  img {
+    width:100%;
+    height: auto;
+    box-shadow: 1px 3px 3px 1px rgba(0, 0, 0, .25);
+    cursor: pointer;
+  }
+}
+
+.left, .center, .right {
+  display: inline-block;
+  width: 25vw;
+  transition: .25s ease-in-out;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.left {
+  transform: rotate(-20deg) translateX(2em) translateY(1em);
+  z-index: 2;
+}
+
+.center {
+  transform: rotate(5deg) translateY(.5em);
+  z-index: 1;
+}
+
+.right {
+  transform: rotate(20deg) translateX(-2em) translateY(1em);
+  z-index: 0;
+}
+
+.left:hover, .center:hover, .right:hover {
+  filter: brightness(1.15);
+}
+
+
+/****** AUDIO ******/
+.audio {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 6em;
+  background: linear-gradient(to bottom, rgb(245, 246, 247), white);
+  .info {
+    padding: 1em .5em;
+  }
+  .gretsch {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(50%);
+  }
+  .iframes {
+    padding: 0 .5em;
+  }
+  
+}

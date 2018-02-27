@@ -1,0 +1,15 @@
+$primary: rgb(62, 79, 238);
+$secondary: rgb(30, 39, 117);
+$primary-variant: rgb(62, 133, 240);
+$secondary-variant: rgb(11, 16, 70);
+$primary-secondary: linear-gradient(to top, $secondary, $primary);
+$secondary-blue: linear-gradient(to bottom, $secondary, $primary);
+
+
+@mixin show-box {
+  background: linear-gradient(to bottom, rgba($secondary, .6), rgba($primary, .25));
+  // border: solid rgba(0, 0, 0, .25) 2px;
+  border-radius: 3px;
+  // color: white;
+  box-shadow: 0px 6px 3px -2px rgba(0, 0, 0, .5);
+}

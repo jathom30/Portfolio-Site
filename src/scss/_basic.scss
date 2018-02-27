@@ -1,0 +1,129 @@
+/********************** BACIS SETUP **********************/
+html {
+  font-family: 'Raleway', sans-serif;
+  background: rgb(236, 236, 236);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -100;
+}
+
+
+h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 3em;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  padding-right: 1em;
+  margin-bottom: 0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  h1 {
+    padding: 1em 0;
+    margin: 0 1em;
+    letter-spacing: 5px;
+  }
+}
+
+
+.info {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0 1em;
+
+  p {
+    &:first-of-type {
+      padding-top: 2em;
+    }
+    &:last-of-type {
+      padding-bottom: 2em;
+    }
+  }
+}
+
+.box {
+  @include show-box();
+}
+
+.links {
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  
+  a {
+    text-transform: uppercase;
+    color: black;
+    padding: 1em .5em;
+    width: 33%;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.25);
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+    &.active {
+      background: rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+.section-h1 {
+  position: relative;
+  &.no-click {
+    pointer-events: none;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, .75);
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(50%,50%);
+    z-index: 1;
+  }
+  .beetle-pos {
+    background: radial-gradient(circle, $secondary 5%, $primary);
+    margin: 0 auto;
+    position: relative;
+    clip-path: circle(25vw at 50% 50%);
+    // #random-beetle {
+    //   // filter: url('#goo');
+    // }
+    svg {
+      width: 75%;
+      display: block;
+      margin: 0 auto;
+  
+      circle {
+        fill: $secondary;
+      }
+      path {
+        fill: $primary;
+      }
+    }
+  }
+}

@@ -96,21 +96,6 @@ a {
       .section-h1 .beetle-pos svg path {
         fill: #3e4fee; }
 
-/********************** SPACER SECTIONS **********************/
-.spacer {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; }
-  .spacer h1 {
-    mix-blend-mode: soft-light;
-    text-transform: uppercase;
-    letter-spacing: 20px;
-    top: 50%;
-    right: 50%; }
-
 /********************** HEADER SECTION **********************/
 .header {
   position: fixed;
@@ -442,23 +427,6 @@ a {
           fill: #1e2775; }
         .contact .contact-links .contact-group svg .icon-face {
           fill: #3e4fee; }
-
-/********************** SOCIAL MEDIA ICONS **********************/
-.social-media {
-  text-align: center; }
-  .social-media svg {
-    width: 20vw;
-    height: auto;
-    padding: 0 .5em;
-    transition: transform cubic-bezier(0.62, -0.4, 0.49, 1.01) 0.3s; }
-    .social-media svg:hover {
-      transform: scale(1.2); }
-    .social-media svg .icon-circle {
-      fill: #1e2775; }
-    .social-media svg .icon-shadow {
-      fill: #1e2775; }
-    .social-media svg .icon-face {
-      fill: #3e4fee; }
 
 /********************** FOOTER SECTION **********************/
 .footer {
