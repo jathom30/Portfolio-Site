@@ -21,6 +21,9 @@ export default class Web extends Component {
 
           <div className="portfolio-images">
             <a href={`http://${webData.imgLink}`}><img src={ `./images/${webData.imgSrc}`} alt={webData.altTitle}/></a>
+            <p>
+              { webData.about }
+            </p>
           </div>
         </div>
       </div>

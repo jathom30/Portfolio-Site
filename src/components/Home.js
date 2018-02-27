@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { TimelineMax, Elastic, Power1, Sine } from 'gsap';
 
-import BeetlePieces from '../assets/BeetlePieces';
+// import BeetlePieces from '../assets/BeetlePieces';
 
 export default class Home extends Component {
 
@@ -58,10 +58,22 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home main" id="home">
-        <h1>Welcome</h1>
-        <p>put things here</p>
+        <h1>Jeff Thomas</h1>
+        <div className="main-points">
+        can nav look like this?
+          <div>
+            <h3>Code</h3>
+          </div>
+          <div>
+            <h3>Design</h3>
+          </div>
+          <div>
+            <h3>Music</h3>
+          </div>
+        </div>
+
         <div className="beetle-main">
-          <BeetlePieces />
+          {/* <BeetlePieces /> */}
         </div>
       </div>
     );

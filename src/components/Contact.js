@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import SocialMedia from './SocialMedia';
 import Beetle from './Beetle';
 import PhoneIcon from '../assets/PhoneIcon';
 import MailIcon from '../assets/MailIcon';
 import TwitterIcon from '../assets/TwitterIcon';
+import GitIcon from '../assets/GitIcon';
 
 export default class Contact extends Component {
   render() {
@@ -14,17 +14,26 @@ export default class Contact extends Component {
 
         <div className="contact-links">
 
-          <MailIcon />
-          <a href="mailto:jathom30@gmail.com?Subject=Oh, hello"><p>jathom30@gmail.com</p></a>
+          <div className="contact-group">
+            <a href="mailto:jathom30@gmail.com?Subject=Oh, hello"><p>jathom30@gmail.com</p></a>
+            <MailIcon />
+          </div>
+          <div className="contact-group">
+            <a href="tel:+1-502-439-1974"><p>502-439-1974</p></a>
+            <PhoneIcon />
+          </div>
 
-          <PhoneIcon />
-          <a href="tel:+1-502-439-1974"><p>502-439-1974</p></a>
+          <div className="contact-group">
+            <a href="http://twitter.com/jeffathomas" rel="noopener noreferrer" target="_blank"><p>@jeffathomas</p></a>
+            <TwitterIcon />
+          </div>
 
-          <TwitterIcon />
-          <a href="http://twitter.com/jeffathomas" rel="noopener noreferrer" target="_blank"><p>@jeffathomas</p></a>
-        
+          <div className="contact-group">
+            <a href="http://github.com/jathom30" rel="noopener noreferrer" target="_blank"><p>/jathom30</p></a>
+            <GitIcon />
+          </div>
+
         </div>
-        <SocialMedia />
       </div>
     );
   }

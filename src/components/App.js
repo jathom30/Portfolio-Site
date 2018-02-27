@@ -57,15 +57,15 @@ export default class App extends Component {
   changeWebImage(e) {
     if (e.target.id === 'stn') {
       this.setState({
-        data: STNData,
+        webData: STNWebData,
       });
     } else if (e.target.id === 'angel') {
       this.setState({
-        data: AngelData,
+        webData: AngelData,
       });
     } else if (e.target.id === 'signature') {
       this.setState({
-        data: SignatureData,
+        webData: SignatureData,
       });
     }
   }

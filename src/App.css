@@ -193,13 +193,30 @@ a {
 
 /********************** HOME SECTION **********************/
 .home {
-  min-height: 100vh;
   padding: 1em 0; }
   .home h1 {
     font-weight: 700; }
+  .home .main-points {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .home .main-points h3 {
+      margin: auto 0; }
+    .home .main-points div {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1; }
+    .home .main-points div:first-child {
+      background: beige;
+      margin-bottom: -20%; }
+    .home .main-points div:nth-last-of-type(2) {
+      background: #3e4fee;
+      clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%); }
+    .home .main-points div:last-child {
+      margin-top: -20%;
+      background: azure; }
   .home .beetle-main {
-    width: 100vw;
-    height: 100vh;
     overflow: hidden;
     top: 0;
     left: 0;
@@ -226,13 +243,15 @@ a {
   .web .info {
     padding: 0 .5em; }
 
-.portfolio .web .portfolio-images img {
-  width: 75vw;
-  box-shadow: none;
-  transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) 0.3s all; }
-  .portfolio .web .portfolio-images img:hover {
-    filter: brightness(1.15);
-    transition: ease-out 0s all; }
+.portfolio .web .portfolio-images {
+  display: block; }
+  .portfolio .web .portfolio-images img {
+    width: 75vw;
+    box-shadow: none;
+    transition: cubic-bezier(0.49, -0.12, 0.53, 1.09) 0.3s all; }
+    .portfolio .web .portfolio-images img:hover {
+      filter: brightness(1.15);
+      transition: ease-out 0s all; }
 
 /****** IMAGES ******/
 .visual {
@@ -395,38 +414,34 @@ a {
 /********************** CONTACT SECTION **********************/
 .contact {
   padding: 1em .5em;
-  background: linear-gradient(to bottom, #f5f6f7, white); }
+  background: linear-gradient(to bottom, #f5f6f7, white);
+  height: 100vh; }
   .contact .contact-links {
-    padding: 3em 0;
-    font-size: 1.25em;
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-auto-rows: 75px; }
-    .contact .contact-links h3 {
-      grid-column: span 2;
-      text-align: center;
-      text-transform: uppercase;
-      margin-bottom: 0.5em; }
-    .contact .contact-links p {
-      margin: .25em; }
-    .contact .contact-links svg {
-      width: 50px;
-      height: auto;
-      display: inline-block;
-      justify-self: center;
-      align-self: center; }
-      .contact .contact-links svg .icon-circle {
-        fill: #1e2775; }
-      .contact .contact-links svg .icon-shadow {
-        fill: #1e2775; }
-      .contact .contact-links svg .icon-face {
-        fill: #3e4fee; }
-    .contact .contact-links .right-text {
-      text-align: right;
-      padding-right: .5em; }
-    .contact .contact-links a {
-      color: black;
-      align-self: center; }
+    padding: 3em 20px;
+    font-size: 1.25em; }
+    .contact .contact-links .contact-group {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end; }
+      .contact .contact-links .contact-group a {
+        display: inline-block;
+        margin-left: 20px;
+        color: black;
+        align-self: center; }
+        .contact .contact-links .contact-group a:hover + svg {
+          transform: scale(1.2); }
+      .contact .contact-links .contact-group svg {
+        width: 50px;
+        height: auto;
+        display: inline-block;
+        align-self: center;
+        transition: transform cubic-bezier(0.62, -0.4, 0.49, 1.01) 0.3s; }
+        .contact .contact-links .contact-group svg .icon-circle {
+          fill: #1e2775; }
+        .contact .contact-links .contact-group svg .icon-shadow {
+          fill: #1e2775; }
+        .contact .contact-links .contact-group svg .icon-face {
+          fill: #3e4fee; }
 
 /********************** SOCIAL MEDIA ICONS **********************/
 .social-media {
