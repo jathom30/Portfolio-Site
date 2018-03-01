@@ -1,9 +1,12 @@
 /********************** HOME SECTION **********************/
 .home {
   // min-height: 100vh;
-  padding: 1em 0;
+  // padding: 1em 0;
   h1 {
     font-weight: 700;
+    font-size: 4em;
+    text-align: center;
+    margin: 0;
   }
   .main-points {
     // background: pink;
@@ -11,11 +14,13 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    clip-path: url(#clipping-beetle);
     h3 {
       // margin: auto;
       // text-align: center;
       // padding: 0 20px;
       margin: auto 0;
+      font-size: 3em;
     }
     div {
       display: flex;
@@ -24,38 +29,34 @@
       // clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     }
     div:first-child {
-      // flex-grow: 3;
       background: beige;
       margin-bottom: -20%;
       // clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
     }
     div:nth-last-of-type(2) {
       background: $primary;
-      // flex-grow: 2;
       clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%);
     }
     div:last-child {
       margin-top: -20%;
-      // flex-grow: 3;
       background: azure;
       // clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
     }
   }
   .beetle-main {
-    // width: 100vw;
+    width: 100vw;
     // height: 100vh;
     overflow: hidden;
-    // position: fixed;
-    top: 0;
-    left: 0;
-    // background: pink;
+    position: absolute;
+    top: 35%;
+    // z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
     svg {
       width: 100vw;
       * {
-        fill: $primary;
+        fill: $secondary;
       }
     }
   }
