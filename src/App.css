@@ -116,7 +116,7 @@ a {
     .header svg #beetle-icon-path {
       fill: white; }
       .header svg #beetle-icon-path:hover {
-        fill: orange;
+        fill: #3e4fee;
         transition: .5s fill; }
     .header svg #beetle-icon-circle {
       fill: none; }
@@ -126,9 +126,9 @@ a {
     padding: 15px;
     cursor: pointer; }
     .header .bun:hover .hamburger:after, .header .bun:hover .hamburger:before {
-      background: orange; }
+      background: #3e4fee; }
     .header .bun:hover .hamburger {
-      background: orange; }
+      background: #3e4fee; }
     .header .bun:hover .hamburger.exposed {
       background: none; }
   .header .hamburger {
@@ -174,50 +174,53 @@ a {
       color: white;
       transition: color .5s; }
       .header .header-links a:hover {
-        color: orange; }
+        color: #3e4fee; }
 
 /********************** HOME SECTION **********************/
-.home h1 {
-  font-weight: 700;
-  font-size: 4em;
-  text-align: center;
-  margin: 0; }
-
-.home .main-points {
-  height: 500px;
+.home {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  clip-path: url(#clipping-beetle); }
-  .home .main-points h3 {
-    margin: auto 0;
-    font-size: 3em; }
-  .home .main-points div {
+  justify-content: space-around; }
+  .home h1 {
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; }
+  .home .main-points {
     display: flex;
-    justify-content: center;
-    flex-grow: 1; }
-  .home .main-points div:first-child {
-    background: beige;
-    margin-bottom: -20%; }
-  .home .main-points div:nth-last-of-type(2) {
-    background: #3e4fee;
-    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%); }
-  .home .main-points div:last-child {
-    margin-top: -20%;
-    background: azure; }
-
-.home .beetle-main {
-  width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .home .beetle-main svg {
-    width: 100vw; }
-    .home .beetle-main svg * {
-      fill: #1e2775; }
+    flex-direction: row;
+    justify-content: space-around; }
+    .home .main-points h3 {
+      margin: 0;
+      display: inline-block; }
+  .home .beetle-main {
+    margin: 30px 0; }
+    .home .beetle-main svg {
+      width: 100vw;
+      height: auto; }
+      .home .beetle-main svg * {
+        fill: #1e2775; }
+  .home .talking-points {
+    text-align: center; }
+    .home .talking-points p {
+      display: inline-block;
+      background: #1e2775;
+      color: #ececec;
+      margin: 10px;
+      padding: 5px; }
+  .home .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .home .social-media svg {
+      width: 80px;
+      height: auto; }
+      .home .social-media svg .icon-shadow, .home .social-media svg .icon-circle {
+        fill: #1e2775; }
+      .home .social-media svg .icon-face {
+        fill: #ececec; }
 
 /********************** PORTFOLIO SECTION **********************/
 .portfolio {
@@ -431,7 +434,7 @@ a {
         .contact .contact-links .contact-group svg .icon-shadow {
           fill: #1e2775; }
         .contact .contact-links .contact-group svg .icon-face {
-          fill: #3e4fee; }
+          fill: #ececec; }
 
 /********************** FOOTER SECTION **********************/
 .footer {

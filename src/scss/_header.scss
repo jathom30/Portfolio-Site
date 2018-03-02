@@ -18,7 +18,7 @@
     #beetle-icon-path {
       fill: white;
       &:hover {
-        fill: orange;
+        fill: $primary;
         transition: .5s fill;
       }
     }
@@ -34,10 +34,10 @@
     padding: 15px;
     cursor: pointer;
     &:hover .hamburger:after, &:hover .hamburger:before {
-      background: orange;
+      background: $primary;
     }
     &:hover .hamburger {
-      background: orange;
+      background: $primary;
     }
     &:hover .hamburger.exposed {
       background: none;
@@ -94,7 +94,7 @@
       color: white;
       transition: color .5s;
       &:hover {
-        color: orange;
+        color: $primary;
       }
     }
   }

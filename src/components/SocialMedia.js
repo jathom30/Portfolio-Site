@@ -3,16 +3,15 @@ import React from 'react';
 
 import GitIcon from '../assets/GitIcon';
 import TwitterIcon from '../assets/TwitterIcon';
-import YoutubeIcon from '../assets/YoutubeIcon';
+import MailIcon from '../assets/MailIcon';
 
 const SocialMedia = () => {
   return (
     <div className="social-media">
-      {/* <h3>Find Me, Follow Me</h3> */}
       <div>
-        <a href="http://twitter.com/jeffathomas"><TwitterIcon /></a>
-        <a href="http://github.com/jathom30"><GitIcon /></a>
-        <a href="http://youtube.com/stnapoleonband"><YoutubeIcon /></a>
+        <a href="http://twitter.com/jeffathomas" rel="noopener noreferrer" target="_blank"><TwitterIcon /></a>
+        <a href="http://github.com/jathom30" rel="noopener noreferrer" target="_blank"><GitIcon /></a>
+        <a href="mailto:jathom30@gmail.com?Subject=Oh, hello"><MailIcon /></a>
       </div>
     </div>
   );

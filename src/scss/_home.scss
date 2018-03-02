@@ -1,62 +1,58 @@
 /********************** HOME SECTION **********************/
 .home {
-  // min-height: 100vh;
-  // padding: 1em 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   h1 {
     font-weight: 700;
-    font-size: 4em;
     text-align: center;
     margin: 0;
+    padding: 0;
+    padding-top: 60px;
   }
   .main-points {
-    // background: pink;
-    height: 500px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-around;
-    clip-path: url(#clipping-beetle);
     h3 {
-      // margin: auto;
-      // text-align: center;
-      // padding: 0 20px;
-      margin: auto 0;
-      font-size: 3em;
-    }
-    div {
-      display: flex;
-      justify-content: center;
-      flex-grow: 1;
-      // clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
-    }
-    div:first-child {
-      background: beige;
-      margin-bottom: -20%;
-      // clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
-    }
-    div:nth-last-of-type(2) {
-      background: $primary;
-      clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0 100%);
-    }
-    div:last-child {
-      margin-top: -20%;
-      background: azure;
-      // clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%);
+      margin: 0;
+      display: inline-block;
     }
   }
   .beetle-main {
-    width: 100vw;
-    // height: 100vh;
-    overflow: hidden;
-    position: absolute;
-    top: 35%;
-    // z-index: -1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 30px 0;
     svg {
       width: 100vw;
+      height: auto;
       * {
         fill: $secondary;
+      }
+    }
+  }
+  .talking-points {
+    text-align: center;
+    p {
+      display: inline-block;
+      background: $secondary;
+      color: $background;
+      margin: 10px;
+      padding: 5px;
+    }
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    svg {
+      width: 80px;
+      height: auto;
+      .icon-shadow, .icon-circle {
+        fill: $secondary;
+      }
+      .icon-face {
+        fill: $background;
       }
     }
   }

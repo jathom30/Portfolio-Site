@@ -4,6 +4,7 @@ $primary-variant: rgb(62, 133, 240);
 $secondary-variant: rgb(11, 16, 70);
 $primary-secondary: linear-gradient(to top, $secondary, $primary);
 $secondary-blue: linear-gradient(to bottom, $secondary, $primary);
+$background: rgb(236, 236, 236);
 
 
 @mixin show-box {

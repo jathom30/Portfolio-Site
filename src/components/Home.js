@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { TimelineMax, Elastic, Power1, Sine } from 'gsap';
 
 import BeetlePieces from '../assets/BeetlePieces';
+import SocialMedia from './SocialMedia';
 
 export default class Home extends Component {
 
@@ -60,20 +61,21 @@ export default class Home extends Component {
       <div className="home main" id="home">
         <h1>Jeff Thomas</h1>
         <div className="main-points">
-          <div>
             <h3>Code</h3>
-          </div>
-          <div>
             <h3>Design</h3>
-          </div>
-          <div>
             <h3>Music</h3>
-          </div>
         </div>
 
         <div className="beetle-main">
           <BeetlePieces />
         </div>
+
+        <div className="talking-points">
+          <p>Front-end dev and design.</p>
+          <p>React friendly, Jazz Guitarist.</p>
+        </div>
+
+        <SocialMedia />
       </div>
     );
   }
