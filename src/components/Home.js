@@ -46,9 +46,9 @@ export default class Home extends Component {
       <div className="home main" id="home">
         <h1>Jeff Thomas</h1>
         <div className="main-points">
-            <h3>Code</h3>
-            <h3>Design</h3>
-            <h3>Music</h3>
+            <a href="#code"><h3>Code</h3></a>
+            <a href="#design"><h3>Design</h3></a>
+            <a href="#music"><h3>Music</h3></a>
         </div>
 
         <div className="beetle-main">

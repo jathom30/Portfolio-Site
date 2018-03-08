@@ -5,7 +5,7 @@ export default class Web extends Component {
     const {webData, changeWebImage} = this.props;
 
     return (
-      <div className="web">
+      <div id="code" className="web">
         <div className="info">
           <h2>Websites</h2>
           <p>I have a strong interest in front-end web. After completing Code Louisville's Front-End Web Development track as well as their Python track, I've gone on to self-learn SASS, React, and updated my JavaScript learning with CS6.</p>

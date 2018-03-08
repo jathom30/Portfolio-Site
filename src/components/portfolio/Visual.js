@@ -27,7 +27,7 @@ export default class Visual extends Component {
     }
 
     return (
-      <div className='visual'>
+      <div id="design" className='visual'>
         <div className="info">
           <h2>Graphic Design</h2>
           <p>In the past four years, I've created dozens of yearbooks working with elementary, specialty, and private schools. This involves presenting the client with different themes I've made and then customizing it further based on their requests.</p>

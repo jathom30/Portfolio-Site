@@ -101,25 +101,31 @@ a {
 /********************** HEADER SECTION **********************/
 .header {
   position: fixed;
-  width: 100vw;
-  height: 50px;
-  padding-top: 10px;
-  z-index: 100;
+  right: -5px;
+  top: -5px;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
   background: #0e1338;
-  color: black;
-  transition: height .5s;
-  display: grid;
-  grid-template-rows: auto 1fr; }
+  border-radius: 50%;
+  transition: all .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; }
+  .header .nav-buttons {
+    position: fixed;
+    right: 15px;
+    top: 15px; }
   .header.full {
-    height: 100vh; }
+    border-radius: 0;
+    height: 100vh;
+    width: 100vw;
+    display: block; }
   .header svg {
+    fill: white;
     width: auto;
     height: 36px; }
-    .header svg #beetle-icon-path {
-      fill: white; }
-      .header svg #beetle-icon-path:hover {
-        fill: #3e4fee;
-        transition: .5s fill; }
     .header svg #beetle-icon-circle {
       fill: none; }
   .header .bun {
@@ -128,9 +134,9 @@ a {
     padding: 15px;
     cursor: pointer; }
     .header .bun:hover .hamburger:after, .header .bun:hover .hamburger:before {
-      background: #3e4fee; }
+      background: #9ca4f6; }
     .header .bun:hover .hamburger {
-      background: #3e4fee; }
+      background: #9ca4f6; }
     .header .bun:hover .hamburger.exposed {
       background: none; }
   .header .hamburger {
@@ -176,7 +182,7 @@ a {
       color: white;
       transition: color .5s; }
       .header .header-links a:hover {
-        color: #3e4fee; }
+        color: #9ca4f6; }
 
 /********************** HOME SECTION **********************/
 .home {
@@ -200,15 +206,12 @@ a {
       padding: 5px;
       color: #1e2775; }
   .home .beetle-main {
-    margin: 30px 0;
-    transition: transform .3s ease-in-out; }
+    margin: 30px 0; }
     .home .beetle-main svg {
       width: 100vw;
       height: auto; }
       .home .beetle-main svg * {
         fill: #1e2775; }
-    .home .beetle-main:hover {
-      transform: scale(1.2); }
   .home .talking-points {
     text-align: center; }
     .home .talking-points p {

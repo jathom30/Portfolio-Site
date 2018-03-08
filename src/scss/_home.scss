@@ -31,10 +31,6 @@
         fill: $secondary;
       }
     }
-    &:hover {
-      transform: scale(1.2);
-    }
-    transition: transform .3s ease-in-out;
   }
   .talking-points {
     text-align: center;

@@ -1,27 +1,54 @@
 /********************** HEADER SECTION **********************/
 .header {
+  // position: fixed;
+  // width: 100vw;
+  // height: 50px;
+  // padding-top: 10px;
+  // z-index: 100;
+  // background: darken($color: $secondary, $amount: 15%);
+  // color: black;
+  // transition: height .5s;
+  // display: grid;
+  // grid-template-rows: auto 1fr;
+
+  
   position: fixed;
-  width: 100vw;
-  height: 50px;
-  padding-top: 10px;
-  z-index: 100;
+  right: -5px;
+  top: -5px;
+  width: 55px;
+  height: 55px;
+  padding: 10px;
   background: darken($color: $secondary, $amount: 15%);
-  color: black;
-  transition: height .5s;
-  display: grid;
-  grid-template-rows: auto 1fr;
+  border-radius: 50%;
+  transition: all .3s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  z-index: 100;
+  
+  .nav-buttons {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+  }
   &.full {
+    border-radius: 0;
     height: 100vh;
+    width: 100vw;
+    display: block;
   }
 
   svg {
-    #beetle-icon-path {
       fill: white;
-      &:hover {
-        fill: $primary;
-        transition: .5s fill;
-      }
-    }
+    // #beetle-icon-path {
+    //   fill: white;
+    //   &:hover {
+    //     fill: lighten($color: $primary, $amount: 20%);
+    //     transition: .5s fill;
+    //   }
+    // }
     #beetle-icon-circle {
       fill: none;
     }
@@ -34,10 +61,10 @@
     padding: 15px;
     cursor: pointer;
     &:hover .hamburger:after, &:hover .hamburger:before {
-      background: $primary;
+      background: lighten($color: $primary, $amount: 20%);
     }
     &:hover .hamburger {
-      background: $primary;
+      background: lighten($color: $primary, $amount: 20%);
     }
     &:hover .hamburger.exposed {
       background: none;
@@ -94,7 +121,7 @@
       color: white;
       transition: color .5s;
       &:hover {
-        color: $primary;
+        color: lighten($color: $primary, $amount: 20%);
       }
     }
   }
