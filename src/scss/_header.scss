@@ -18,7 +18,7 @@
   width: 55px;
   height: 55px;
   padding: 10px;
-  background: darken($color: $secondary, $amount: 15%);
+  background: $secondary;
   border-radius: 50%;
   transition: all .3s;
 
@@ -32,84 +32,43 @@
     position: fixed;
     right: 15px;
     top: 15px;
+    cursor: pointer;
   }
   &.full {
     border-radius: 0;
     height: 100vh;
     width: 100vw;
-    display: block;
+    background: darken($color: $secondary, $amount: 15%)
   }
 
-  svg {
-      fill: white;
-    // #beetle-icon-path {
-    //   fill: white;
-    //   &:hover {
-    //     fill: lighten($color: $primary, $amount: 20%);
-    //     transition: .5s fill;
-    //   }
-    // }
-    #beetle-icon-circle {
-      fill: none;
+  #beetle-icon {
+    width: 30vw;
+    height: auto;
+    fill: white;
+  }
+  #beetle-icon-path {
+    fill: white;
+    &:hover {
+      fill: lighten($color: $primary, $amount: 20%);
+      transition: .5s fill;
     }
+  }
+  #beetle-icon-circle {
+    fill: transparent;
+  }
+  #hamburger {
     width: auto;
     height: 36px;
-  }
-  .bun {
-    float: right;
-    height: 6px;
-    padding: 15px;
-    cursor: pointer;
-    &:hover .hamburger:after, &:hover .hamburger:before {
-      background: lighten($color: $primary, $amount: 20%);
-    }
-    &:hover .hamburger {
-      background: lighten($color: $primary, $amount: 20%);
-    }
-    &:hover .hamburger.exposed {
-      background: none;
+    fill: white;
+    transition: .3s all;
+    &:hover {
+      fill: lighten($color: $primary, $amount: 20%);
     }
   }
-  .hamburger {
-    position: relative;
-    transform: translateY(50%);
-    width: 40px;
-    height: 3px;
-    background: white;
-    transition: all .5s cubic-bezier(0.63,-0.48, 0.39, 1.6);
-    border-radius: 3px;
-    &:after, &:before {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 3px;
-      background: white;
-      transition: .5s;
-      border-radius: 3px;
-    }
-    &:before {
-      top: -10px;
-    }
-    &:after {
-      top: 10px;
-    }
-    &.exposed {
-      background: none;    
-      &:before, &:after {
-        top: 0;
-        height: 3px;
-      }
-      &:before {
-        transform: rotate(135deg);
-      }
-      &:after {
-        transform: rotate(-135deg);
-      }
-    }
-  }
+  
   .header-links {
     width: 100vw;
-    height: 45vh;
+    height: 60vh;
     margin: 25vh 0;
     display: flex;
     flex-direction: column;

@@ -106,7 +106,7 @@ a {
   width: 55px;
   height: 55px;
   padding: 10px;
-  background: #0e1338;
+  background: #1e2775;
   border-radius: 50%;
   transition: all .3s;
   display: flex;
@@ -116,61 +116,34 @@ a {
   .header .nav-buttons {
     position: fixed;
     right: 15px;
-    top: 15px; }
+    top: 15px;
+    cursor: pointer; }
   .header.full {
     border-radius: 0;
     height: 100vh;
     width: 100vw;
-    display: block; }
-  .header svg {
-    fill: white;
+    background: #0e1338; }
+  .header #beetle-icon {
+    width: 30vw;
+    height: auto;
+    fill: white; }
+  .header #beetle-icon-path {
+    fill: white; }
+    .header #beetle-icon-path:hover {
+      fill: #9ca4f6;
+      transition: .5s fill; }
+  .header #beetle-icon-circle {
+    fill: transparent; }
+  .header #hamburger {
     width: auto;
-    height: 36px; }
-    .header svg #beetle-icon-circle {
-      fill: none; }
-  .header .bun {
-    float: right;
-    height: 6px;
-    padding: 15px;
-    cursor: pointer; }
-    .header .bun:hover .hamburger:after, .header .bun:hover .hamburger:before {
-      background: #9ca4f6; }
-    .header .bun:hover .hamburger {
-      background: #9ca4f6; }
-    .header .bun:hover .hamburger.exposed {
-      background: none; }
-  .header .hamburger {
-    position: relative;
-    transform: translateY(50%);
-    width: 40px;
-    height: 3px;
-    background: white;
-    transition: all 0.5s cubic-bezier(0.63, -0.48, 0.39, 1.6);
-    border-radius: 3px; }
-    .header .hamburger:after, .header .hamburger:before {
-      content: '';
-      position: absolute;
-      width: 40px;
-      height: 3px;
-      background: white;
-      transition: .5s;
-      border-radius: 3px; }
-    .header .hamburger:before {
-      top: -10px; }
-    .header .hamburger:after {
-      top: 10px; }
-    .header .hamburger.exposed {
-      background: none; }
-      .header .hamburger.exposed:before, .header .hamburger.exposed:after {
-        top: 0;
-        height: 3px; }
-      .header .hamburger.exposed:before {
-        transform: rotate(135deg); }
-      .header .hamburger.exposed:after {
-        transform: rotate(-135deg); }
+    height: 36px;
+    fill: white;
+    transition: .3s all; }
+    .header #hamburger:hover {
+      fill: #9ca4f6; }
   .header .header-links {
     width: 100vw;
-    height: 45vh;
+    height: 60vh;
     margin: 25vh 0;
     display: flex;
     flex-direction: column;
