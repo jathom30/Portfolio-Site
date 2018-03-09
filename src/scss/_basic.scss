@@ -39,6 +39,7 @@ a {
 }
 
 .main {
+  background: linear-gradient(to bottom, lighten($color: $background, $amount: 5%), white);
   h1 {
     padding: 1em 0;
     margin: 0 1em;
@@ -109,7 +110,7 @@ a {
     z-index: 1;
   }
   .beetle-pos {
-    background: radial-gradient(circle, $secondary 5%, $primary);
+    background: darken($color: $secondary, $amount: 5%);
     margin: 0 auto;
     position: relative;
     clip-path: circle(25vw at 50% 50%);
@@ -120,12 +121,8 @@ a {
       width: 75%;
       display: block;
       margin: 0 auto;
-  
-      circle {
-        fill: $secondary;
-      }
       path {
-        fill: $primary;
+        fill: lighten($color: $secondary, $amount: 15%);
       }
     }
   }

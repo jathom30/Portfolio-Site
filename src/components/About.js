@@ -14,9 +14,9 @@ const headshotBackground = {
 export default class About extends Component {
   render() {
     return (
-      <div id="about">
+      <div id="about" className="main">
         <Beetle title="About" />
-        <div className="about main" >
+        <div className="about" >
   
           <div className="info">
             <div className="bio">
