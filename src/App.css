@@ -5,11 +5,17 @@ html {
   html * {
     -webkit-tap-highlight-color: transparent; }
 
-.background {
-  width: 100vw;
-  height: 100vh;
+.poly-background-upper, .poly-background-lower {
   position: fixed;
-  z-index: -100; }
+  top: -200px;
+  width: 100vw;
+  height: auto; }
+
+.poly-background-upper {
+  z-index: -1; }
+
+.poly-background-lower {
+  z-index: -2; }
 
 h1 {
   text-align: center;
@@ -31,12 +37,10 @@ a {
   padding: 0;
   margin: 0; }
 
-.main {
-  background: linear-gradient(to bottom, #f9f9f9, white); }
-  .main h1 {
-    padding: 1em 0;
-    margin: 0 1em;
-    letter-spacing: 5px; }
+.main h1 {
+  padding: 1em 0;
+  margin: 0 1em;
+  letter-spacing: 5px; }
 
 .info {
   width: 80vw;
@@ -158,7 +162,6 @@ a {
 
 /********************** HOME SECTION **********************/
 .home {
-  background: #ececec;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -336,7 +339,7 @@ a {
       grid-row: span 3;
       overflow: hidden; }
       .about .bio .jeff-thomas .jeff-thomas-bg {
-        height: 138px;
+        height: 100%;
         width: auto; }
       .about .bio .jeff-thomas h2 {
         position: absolute;
@@ -430,3 +433,33 @@ a {
 .footer {
   text-align: center;
   padding: .5em; }
+
+@media screen and (min-width: 500px) {
+  .section-h1 .beetle-pos {
+    clip-path: circle(15vw at 50% 50%); }
+    .section-h1 .beetle-pos svg {
+      width: 40%; }
+  .header.full {
+    height: 50px;
+    right: 0; }
+  .header #beetle-icon {
+    width: auto;
+    height: 40px; }
+  .header .header-links {
+    position: fixed;
+    left: 0;
+    width: calc(100vw - 55px);
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    margin: 0; }
+    .header .header-links a {
+      font-size: 1.5em; }
+  .about .bio {
+    grid-template-rows: repeat(3, 60px) auto; } }
+
+@media screen and (min-width: 950px) {
+  .section-h1 .beetle-pos {
+    clip-path: circle(10vw at 50% 50%); }
+    .section-h1 .beetle-pos svg {
+      width: 30%; } }

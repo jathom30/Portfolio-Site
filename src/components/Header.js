@@ -13,7 +13,7 @@ export default class Header extends Component {
       .to("#bottom", .5, {y: '-30px'}, 0)
       .to("#top", .3, {rotation: -45, transformOrigin: 'center'}, .3)
       .to("#bottom", .3, {rotation: 45, transformOrigin: 'center'}, .3)
-      .to("#middle", .5, {autoAlpha: 0}, .2)
+      .to("#middle", .1, {autoAlpha: 0}, .2)
   }
   uncrossBuns() {
     const tl = new TimelineLite();

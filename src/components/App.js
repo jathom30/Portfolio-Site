@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+import PolyBackgroundUpper from '../assets/PolyBackgroundUpper';
+import PolyBackgroundLower from '../assets/PolyBackgroundLower';
+
 import Header from './Header';
 import Home from './Home';
 import Portfolio from './Portfolio';
@@ -144,6 +147,9 @@ export default class App extends Component {
     return (
       <div className="App">
 
+          <PolyBackgroundUpper />
+          <PolyBackgroundLower />
+
           <Header 
             nav={nav} 
             showHideNav={this.showHideNav}
@@ -170,7 +176,6 @@ export default class App extends Component {
 
           <About />
           <Contact />
-          {/* <SocialMedia /> */}
           
         <div className="footer">© Jeff Thomas 2017</div>
       </div>

@@ -7,13 +7,19 @@ html {
   }
 }
 
-.background {
-  width: 100vw;
-  height: 100vh;
+// POLY BACKGROUND
+.poly-background-upper, .poly-background-lower {
   position: fixed;
-  z-index: -100;
+  top: -200px;
+  width: 100vw;
+  height: auto;
 }
-
+.poly-background-upper {
+  z-index: -1;
+}
+.poly-background-lower {
+  z-index: -2;
+}
 
 h1 {
   text-align: center;
@@ -39,7 +45,7 @@ a {
 }
 
 .main {
-  background: linear-gradient(to bottom, lighten($color: $background, $amount: 5%), white);
+  // background: linear-gradient(to bottom, lighten($color: $background, $amount: 5%), white);
   h1 {
     padding: 1em 0;
     margin: 0 1em;

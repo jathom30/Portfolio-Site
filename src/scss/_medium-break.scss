@@ -1,0 +1,45 @@
+@media screen and (min-width: $break-medium) {
+  //BASIC
+  .section-h1 {
+    .beetle-pos {
+      clip-path: circle(15vw at 50% 50%);
+      svg {
+        width: 40%;
+      }
+    }
+  }
+
+  //HEADER
+  .header {
+    &.full {
+      height: 50px;
+      right: 0;
+    }
+    #beetle-icon {
+      width: auto;
+      height: 40px;
+    }
+    .header-links {
+      position: fixed;
+      left: 0;
+      width: calc(100vw - 55px);
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      a {
+        font-size: 1.5em;
+      }
+    }
+  }
+  //HOME
+  //PORTFOLIO
+  //ABOUT
+  .about {
+    .bio {
+      grid-template-rows: repeat(3, 60px) auto;
+    }
+  }
+  //CONTACT
+  //FOOTER
+}
