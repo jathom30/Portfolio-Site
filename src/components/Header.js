@@ -35,15 +35,10 @@ export default class Header extends Component {
       this.uncrossBuns();
     }
 
-
     return (
       <div id="header" className={nav ? "header full" : "header"} onClick={showHideNav}>
     
         <div className="nav-buttons">
-          {/* <a id="logo" href="#home" onClick={hideNav} ><BeetleIcon /></a> */}
-          {/* <div id="hamburger" className="bun" onClick={showHideNav}>
-            <div className={ nav ? 'hamburger exposed' : 'hamburger'}></div>
-          </div> */}
           <Hamburger />
         </div>
     

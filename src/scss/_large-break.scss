@@ -8,4 +8,42 @@
       }
     }
   }
+
+  //HEADER
+  .header {
+    .nav-buttons {
+      display: none;
+    }
+    &.full {
+      height: 50px;
+      right: 0;
+    }
+    #beetle-icon {
+      width: auto;
+      height: 40px;
+    }
+    .header-links {
+      position: fixed;
+      left: 0;
+      width: calc(100vw - 55px);
+      height: auto;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      a {
+        font-size: 1.25em;
+      }
+    }
+
+  }
+  //HOME
+  //PORTFOLIO
+  //ABOUT
+  .about {
+    .bio {
+      grid-template-rows: repeat(3, 100px) auto;
+    }
+  }
+  //CONTACT
+  //FOOTER
 }

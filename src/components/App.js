@@ -50,11 +50,27 @@ export default class App extends Component {
     });
   }
   hideNav(e) {
-    this.setState({
-      nav: false,
+    if (window.innerWidth < 950) {
+      console.log(window.innerWidth)
+      this.setState({
+        nav: true,
+      });
+    }
+  }
+  componentDidMount() {
+    // window.addEventListener('resize', this.updateDimensions.bind(this));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 949) {
+        this.setState({
+          nav: true,
+        })
+      } else {
+        this.setState({
+          nav: false,
+        })
+      }
     });
   }
-
   //portfolio funcs
   // WEB
   changeWebImage(e) {
