@@ -18,6 +18,7 @@ export default class App extends Component {
     this.state = {
       //header state
       nav: false,
+      windowWidth: window.innerWidth,
       //portfolio state
       // WEB
       webData: STNWebData,
@@ -33,6 +34,8 @@ export default class App extends Component {
     // header func
     this.showHideNav = this.showHideNav.bind(this);
     this.hideNav = this.hideNav.bind(this);
+    this.updateWindowWidth = this.updateWindowWidth.bind(this);
+    // this.updateWindowWidth = this.updateWindowWidth.bind(this);
     //portfolio func
     // WEB
     this.changeWebImage = this.changeWebImage.bind(this);
@@ -45,32 +48,41 @@ export default class App extends Component {
 
   //header funcs
   showHideNav(e) {
-    this.setState({
-      nav: !this.state.nav,
-    });
+    if (this.state.windowWidth < 950) {
+      this.setState({
+        nav: !this.state.nav,
+      });
+    }
   }
   hideNav(e) {
-    if (window.innerWidth < 950) {
-      console.log(window.innerWidth)
+    if (this.state.windowWidth < 950) {
       this.setState({
         nav: true,
       });
     }
   }
-  componentDidMount() {
-    // window.addEventListener('resize', this.updateDimensions.bind(this));
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 949) {
-        this.setState({
-          nav: true,
-        })
-      } else {
-        this.setState({
-          nav: false,
-        })
-      }
+  updateWindowWidth() {
+    this.setState({ 
+      windowWidth: window.innerWidth
     });
+    if (this.state.windowWidth >= 950) {
+      this.setState({
+        nav: true,
+      })
+    }
   }
+  componentDidMount() {
+    window.addEventListener("resize", this.updateWindowWidth);
+    if (this.state.windowWidth >= 950) {
+      this.setState({
+        nav: true,
+      })
+    }
+  }
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateWindowWidth);
+  }
+  
   //portfolio funcs
   // WEB
   changeWebImage(e) {

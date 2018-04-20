@@ -42,7 +42,7 @@ export default class Header extends Component {
           <Hamburger />
         </div>
     
-        <div className="header-links" style={!nav ? {display: 'none'} : {} } >
+        <div className={nav ? "header-links show" : "header-links"} >
           <a href="#home" onClick={hideNav}><BeetleIcon /></a>
           <a href="#portfolio" onClick={hideNav}>portfolio</a>
           <a href="#about" onClick={hideNav}>about</a>
