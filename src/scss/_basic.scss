@@ -13,6 +13,7 @@ html {
   top: -200px;
   width: 100vw;
   height: auto;
+  opacity: .25;
 }
 .poly-background-upper {
   z-index: -1;
@@ -45,7 +46,8 @@ a {
 }
 
 .main {
-  // background: linear-gradient(to bottom, lighten($color: $background, $amount: 5%), white);
+  background: linear-gradient(to top, lighten($color: $background, $amount: 5%),rgba(255,255,255,0));
+  padding-bottom: 125px;
   h1 {
     padding: 1em 0;
     margin: 0 1em;

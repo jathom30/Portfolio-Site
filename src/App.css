@@ -9,7 +9,8 @@ html {
   position: fixed;
   top: -200px;
   width: 100vw;
-  height: auto; }
+  height: auto;
+  opacity: .25; }
 
 .poly-background-upper {
   z-index: -1; }
@@ -37,10 +38,13 @@ a {
   padding: 0;
   margin: 0; }
 
-.main h1 {
-  padding: 1em 0;
-  margin: 0 1em;
-  letter-spacing: 5px; }
+.main {
+  background: linear-gradient(to top, #f9f9f9, rgba(255, 255, 255, 0));
+  padding-bottom: 125px; }
+  .main h1 {
+    padding: 1em 0;
+    margin: 0 1em;
+    letter-spacing: 5px; }
 
 .info {
   width: 80vw;
@@ -249,8 +253,7 @@ a {
 
 /****** IMAGES ******/
 .visual {
-  padding: 1em .5em;
-  background: linear-gradient(to bottom, #f5f6f7, white); }
+  padding: 1em .5em; }
 
 .portfolio-images {
   padding: 1em 0;
@@ -434,7 +437,8 @@ a {
 /********************** FOOTER SECTION **********************/
 .footer {
   text-align: center;
-  padding: .5em; }
+  padding: .5em;
+  background: white; }
 
 @media screen and (min-width: 500px) {
   .section-h1 .beetle-pos {

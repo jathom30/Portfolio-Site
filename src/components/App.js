@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { TimelineLite } from 'gsap';
 
 import PolyBackgroundUpper from '../assets/PolyBackgroundUpper';
 import PolyBackgroundLower from '../assets/PolyBackgroundLower';
@@ -71,12 +72,41 @@ export default class App extends Component {
       })
     }
   }
+  // hamburger menu animation
+  crossBuns() {
+    const tl = new TimelineLite();
+    tl
+      .to("#top", .5, {y: '30px'})
+      .to("#bottom", .5, {y: '-30px'}, 0)
+      .to("#top", .3, {rotation: -45, transformOrigin: 'center'}, .3)
+      .to("#bottom", .3, {rotation: 45, transformOrigin: 'center'}, .3)
+      .to("#middle", .1, {autoAlpha: 0}, .2)
+  }
+  uncrossBuns() {
+    const tl = new TimelineLite();
+    tl
+      .to("#top", .3, {rotation: 0})
+      .to("#bottom", .3, {rotation: 0}, 0)
+      .to("#top", .3, {y: 0}, .3)
+      .to("#bottom", .3, {y: 0}, .3)
+      .to("#middle", .5, {autoAlpha: 1}, .2)
+  }
+  //update current window width in state
   componentDidMount() {
     window.addEventListener("resize", this.updateWindowWidth);
     if (this.state.windowWidth >= 950) {
       this.setState({
         nav: true,
       })
+    }
+  }
+  componentDidUpdate() {
+    if (this.state.windowWidth < 950) {
+      if (this.state.nav) {
+        this.crossBuns();
+      } else {
+        this.uncrossBuns();
+      }
     }
   }
   componentWillUnmount() {
