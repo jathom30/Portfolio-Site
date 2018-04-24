@@ -29,12 +29,15 @@
       }
     }
     .title {
-      text-align: left;
+      // text-align: left;
       padding: 0;
       margin-top: 0;
       margin-left: 10px;
       font-size: 2em;
       grid-column: span 2;
+      width: 25%;
+      text-align: center;
+      @include h2-sub-title();
     }
     .highlight {
       font-weight: bold;
@@ -43,6 +46,9 @@
       font-size: 1.25em;
       grid-column: span 2;
       grid-row: span 2;
+    }
+    .lowlight {
+      grid-column: span 3;
     }
     p {
       padding-top: 0;
@@ -56,8 +62,10 @@
   }
   .education {
     padding: 1em 0 2em;
+    h2 {
+      @include h2-sub-title();
+    }
     ul {
-      padding: 0;
       li {
         list-style: square outside none;
         padding-bottom: 1em;
@@ -70,14 +78,16 @@
     border-bottom: 1px solid rgba(0, 0, 0, .5);
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 80vw;
     margin: 0 auto;
     padding: 3em 1em;
     h2 {
       // background: white;
-      padding: 0 0 .5em;
       margin-top: 0;
       width: 100%;
+      @include h2-sub-title();
+      // padding: 0 0 .5em;
+      text-align: center;
+      width: auto;
     }
     p {
       margin: 0;
@@ -99,5 +109,8 @@
   }
   .availability {
     padding-top: 2em;
+    h2 {
+      @include h2-sub-title();
+    }
   }
 }

@@ -2,11 +2,22 @@
   //BASIC
   .section-h1 {
     .beetle-pos {
-      clip-path: circle(10vw at 50% 50%);
+      // padding-top: 40px;
+      clip-path: circle(100px at 50% 50%);
       svg {
         width: 30%;
       }
     }
+  }
+
+  .info {
+    width: auto;
+  }
+
+  .main {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 50px;
   }
 
   //HEADER
@@ -16,13 +27,118 @@
     } 
   }
   //HOME
+  .home {
+    .main-points {
+      width: 500px;
+      margin: 0 auto;
+    }
+    .beetle-main {
+      // background: red;
+      svg {
+        height: 300px;
+        // width: 100%;
+      }
+    }
+  }
   //PORTFOLIO
+  .portfolio {
+    .web {
+      @include grid-box();
+      .box {
+        grid-column: span 2;
+        .portfolio-images {
+          img {
+            width: 80%;
+          }
+          p {
+            width: 75%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .visual {
+      @include grid-box();
+      .info {
+        grid-column: 3;
+      }
+      .box {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        .portfolio-images {
+          height: 100%;
+          .left, .center, .right {
+            width: 25%;
+          }
+          .full-image {
+            height: 50vh;
+            width: auto;
+          }
+        }
+      }
+    }
+    .audio {
+      @include grid-box();
+      .gretsch {
+        display: none;
+      }
+      .iframes {
+        grid-column: span 2;
+      }
+    }
+  }
   //ABOUT
   .about {
     .bio {
-      grid-template-rows: repeat(3, 100px) auto;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 30% 150px 1fr;
+      padding: 100px 0;     
+      .title {
+        margin: 0;
+        margin-left: 10px;
+        width: 50%;
+        grid-column: span 1;
+        text-align: center;
+      }
+      .highlight {
+        grid-column: 3;
+        grid-row: span 1;
+        padding: 0;
+      }
+      .lowlight {
+        grid-column: 2 / span 2;
+        grid-row: span 2;
+        padding-left: 10px;
+      }
+    }
+    .education-languages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 100px 0;
+      align-items: center;
+      .languages-programs {
+        grid-column: 2;
+        width: auto;
+      }
+    }
+    .availability {
+      width: 50vw;
+      margin: 0 auto;
     }
   }
   //CONTACT
+  .contact {
+    .contact-links {
+      padding: 100px 0;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 20px;
+      justify-content: center;
+    }
+  }
   //FOOTER
+  .footer {
+    background: none;
+    padding: 20px;
+  }
 }

@@ -39,7 +39,7 @@ a {
   margin: 0; }
 
 .main {
-  background: linear-gradient(to top, #f9f9f9, rgba(255, 255, 255, 0));
+  background: linear-gradient(to top, #f9f9f9, rgba(255, 255, 255, 0) 25%);
   padding-bottom: 125px; }
   .main h1 {
     padding: 1em 0;
@@ -316,8 +316,7 @@ a {
 .audio {
   position: relative;
   overflow: hidden;
-  padding-bottom: 6em;
-  background: linear-gradient(to bottom, #f5f6f7, white); }
+  padding-bottom: 6em; }
   .audio .info {
     padding: 1em .5em; }
   .audio .gretsch {
@@ -355,12 +354,17 @@ a {
         border: none;
         color: white; }
     .about .bio .title {
-      text-align: left;
       padding: 0;
       margin-top: 0;
       margin-left: 10px;
       font-size: 2em;
-      grid-column: span 2; }
+      grid-column: span 2;
+      width: 25%;
+      text-align: center;
+      background: #1e2775;
+      color: #ececec;
+      padding: 5px;
+      border: none; }
     .about .bio .highlight {
       font-weight: bold;
       margin: auto 0;
@@ -368,6 +372,8 @@ a {
       font-size: 1.25em;
       grid-column: span 2;
       grid-row: span 2; }
+    .about .bio .lowlight {
+      grid-column: span 3; }
     .about .bio p {
       padding-top: 0;
       grid-column: span 3; }
@@ -375,23 +381,30 @@ a {
     padding-top: 0; }
   .about .education {
     padding: 1em 0 2em; }
-    .about .education ul {
-      padding: 0; }
-      .about .education ul li {
-        list-style: square outside none;
-        padding-bottom: 1em; }
+    .about .education h2 {
+      background: #1e2775;
+      color: #ececec;
+      padding: 5px;
+      border: none; }
+    .about .education ul li {
+      list-style: square outside none;
+      padding-bottom: 1em; }
   .about .languages-programs {
     border-top: 1px solid rgba(0, 0, 0, 0.5);
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 80vw;
     margin: 0 auto;
     padding: 3em 1em; }
     .about .languages-programs h2 {
-      padding: 0 0 .5em;
       margin-top: 0;
-      width: 100%; }
+      width: 100%;
+      background: #1e2775;
+      color: #ececec;
+      padding: 5px;
+      border: none;
+      text-align: center;
+      width: auto; }
     .about .languages-programs p {
       margin: 0;
       margin-top: .5em; }
@@ -403,6 +416,11 @@ a {
         padding-left: 0; }
   .about .availability {
     padding-top: 2em; }
+    .about .availability h2 {
+      background: #1e2775;
+      color: #ececec;
+      padding: 5px;
+      border: none; }
 
 /********************** CONTACT SECTION **********************/
 .contact {
@@ -445,6 +463,8 @@ a {
     clip-path: circle(15vw at 50% 50%); }
     .section-h1 .beetle-pos svg {
       width: 40%; }
+  .main {
+    border-radius: 0 0 10px 10px; }
   .header.full {
     height: 50px;
     right: 0; }
@@ -461,15 +481,103 @@ a {
     margin: 0; }
     .header .header-links.show a {
       font-size: 1.5em; }
+  .home .beetle-main svg {
+    height: 200px;
+    width: 100%; }
   .about .bio {
     grid-template-rows: repeat(3, 60px) auto; } }
 
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 850px) {
   .section-h1 .beetle-pos {
-    clip-path: circle(10vw at 50% 50%); }
+    clip-path: circle(100px at 50% 50%); }
     .section-h1 .beetle-pos svg {
       width: 30%; }
+  .info {
+    width: auto; }
+  .main {
+    width: 900px;
+    margin: 0 auto;
+    padding-top: 50px; }
   .header .nav-buttons {
     display: none; }
+  .home .main-points {
+    width: 500px;
+    margin: 0 auto; }
+  .home .beetle-main svg {
+    height: 300px; }
+  .portfolio .web {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70vh;
+    align-items: center; }
+    .portfolio .web .box {
+      grid-column: span 2; }
+      .portfolio .web .box .portfolio-images img {
+        width: 80%; }
+      .portfolio .web .box .portfolio-images p {
+        width: 75%;
+        margin: 0 auto; }
+  .portfolio .visual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70vh;
+    align-items: center; }
+    .portfolio .visual .info {
+      grid-column: 3; }
+    .portfolio .visual .box {
+      grid-column: 1 / span 2;
+      grid-row: 1; }
+      .portfolio .visual .box .portfolio-images {
+        height: 100%; }
+        .portfolio .visual .box .portfolio-images .left, .portfolio .visual .box .portfolio-images .center, .portfolio .visual .box .portfolio-images .right {
+          width: 25%; }
+        .portfolio .visual .box .portfolio-images .full-image {
+          height: 50vh;
+          width: auto; }
+  .portfolio .audio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 70vh;
+    align-items: center; }
+    .portfolio .audio .gretsch {
+      display: none; }
+    .portfolio .audio .iframes {
+      grid-column: span 2; }
   .about .bio {
-    grid-template-rows: repeat(3, 100px) auto; } }
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 30% 150px 1fr;
+    padding: 100px 0; }
+    .about .bio .title {
+      margin: 0;
+      margin-left: 10px;
+      width: 50%;
+      grid-column: span 1;
+      text-align: center; }
+    .about .bio .highlight {
+      grid-column: 3;
+      grid-row: span 1;
+      padding: 0; }
+    .about .bio .lowlight {
+      grid-column: 2 / span 2;
+      grid-row: span 2;
+      padding-left: 10px; }
+  .about .education-languages {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px 0;
+    align-items: center; }
+    .about .education-languages .languages-programs {
+      grid-column: 2;
+      width: auto; }
+  .about .availability {
+    width: 50vw;
+    margin: 0 auto; }
+  .contact .contact-links {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+    justify-content: center; }
+  .footer {
+    background: none;
+    padding: 20px; } }

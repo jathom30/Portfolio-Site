@@ -9,6 +9,10 @@
     }
   }
 
+  .main {
+    border-radius: 0 0 10px 10px;
+  }
+
   //HEADER
   .header {
     &.full {
@@ -35,6 +39,14 @@
     }
   }
   //HOME
+  .home {
+    .beetle-main {
+      svg {
+        height: 200px;
+        width: 100%;
+      }
+    }
+  }
   //PORTFOLIO
   //ABOUT
   .about {
